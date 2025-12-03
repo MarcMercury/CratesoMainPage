@@ -190,9 +190,16 @@ body {
 .hero-description {
     font-size: 1.1rem;
     color: rgba(224, 247, 250, 0.8);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     max-width: 500px;
     line-height: 1.8;
+}
+
+.hero-subtext {
+    font-size: 0.95rem;
+    color: var(--mavs-primary);
+    margin-bottom: 2.5rem;
+    font-style: italic;
 }
 
 .hero-buttons {
@@ -726,6 +733,18 @@ section {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    
+    .flow-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .device-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cases-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -757,6 +776,19 @@ section {
         width: 200px;
         height: 200px;
     }
+    
+    .device-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .problem-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .vision-stats {
+        flex-direction: column;
+        gap: 16px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -767,4 +799,328 @@ section {
     .order-content {
         grid-template-columns: 1fr;
     }
+    
+    .problem-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Problem Section */
+.problem {
+    padding: 80px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.problem-main {
+    font-size: 1.4rem;
+    color: var(--mavs-light);
+    margin-bottom: 48px;
+    line-height: 1.6;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.problem-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px;
+    background: var(--mavs-surface);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.problem-icon {
+    font-size: 32px;
+}
+
+.problem-item p {
+    font-size: 14px;
+    color: var(--mavs-muted);
+}
+
+/* How It Works / Flow Steps */
+.how-it-works {
+    padding: 100px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flow-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.flow-step {
+    background: var(--mavs-surface);
+    padding: 32px 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--mavs-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: var(--mavs-dark);
+    margin: 0 auto 20px;
+}
+
+.flow-step h3 {
+    font-size: 18px;
+    color: var(--mavs-light);
+    margin-bottom: 12px;
+}
+
+.flow-step p {
+    font-size: 14px;
+    color: var(--mavs-muted);
+    line-height: 1.6;
+}
+
+.key-insight {
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid var(--mavs-primary);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+}
+
+.key-insight p {
+    font-size: 1.2rem;
+    color: var(--mavs-light);
+}
+
+.key-insight strong {
+    color: var(--mavs-primary);
+}
+
+/* Device Section */
+.device {
+    padding: 100px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.device-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.device-card {
+    background: var(--mavs-surface);
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.device-card:hover {
+    border-color: var(--mavs-primary);
+    transform: translateY(-4px);
+}
+
+.device-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.device-card h3 {
+    font-size: 18px;
+    color: var(--mavs-light);
+    margin-bottom: 12px;
+}
+
+.device-card p {
+    font-size: 14px;
+    color: var(--mavs-muted);
+    line-height: 1.6;
+}
+
+/* Use Cases */
+.use-cases {
+    padding: 100px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.case-card {
+    background: var(--mavs-surface);
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.case-icon {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.case-card h3 {
+    font-size: 18px;
+    color: var(--mavs-light);
+    margin-bottom: 12px;
+}
+
+.case-card p {
+    font-size: 14px;
+    color: var(--mavs-muted);
+    line-height: 1.6;
+}
+
+/* Vision Section */
+.vision {
+    background: var(--mavs-surface);
+    border-radius: 24px;
+    padding: 80px 60px;
+    margin: 60px 40px;
+    max-width: calc(1200px - 80px);
+    text-align: center;
+}
+
+.vision-main {
+    font-size: 1.5rem;
+    color: var(--mavs-light);
+    margin-bottom: 24px;
+}
+
+.vision-detail {
+    font-size: 1.1rem;
+    color: var(--mavs-muted);
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.vision-detail strong {
+    color: var(--mavs-primary);
+}
+
+.vision-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stat-icon {
+    font-size: 24px;
+}
+
+.stat-text {
+    font-size: 14px;
+    color: var(--mavs-muted);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Order Section */
+.order {
+    padding: 100px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.order-card {
+    background: var(--mavs-surface);
+    border-radius: 24px;
+    padding: 48px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.order-price {
+    margin-bottom: 32px;
+}
+
+.price-label {
+    display: block;
+    font-size: 14px;
+    color: var(--mavs-muted);
+    margin-bottom: 8px;
+}
+
+.price-value {
+    display: block;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--mavs-primary);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.price-note {
+    display: block;
+    font-size: 14px;
+    color: var(--mavs-muted);
+    text-decoration: line-through;
+    margin-top: 8px;
+}
+
+.order-includes {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.order-includes li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 15px;
+    color: var(--mavs-light);
+}
+
+.order-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.order-form input {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    background: var(--mavs-dark);
+    color: var(--mavs-light);
+    font-size: 15px;
+}
+
+.order-form input:focus {
+    outline: none;
+    border-color: var(--mavs-primary);
+}
+
+.order-note {
+    font-size: 13px;
+    color: var(--mavs-muted);
 }
