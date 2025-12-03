@@ -25,6 +25,7 @@
     --tag-accent: #FF6B6B;
     --hifumi-accent: #4ECDC4;
     --mavs-accent: #00D4FF;
+    --mtp-accent: #C9A86C;
 }
 
 html {
@@ -377,6 +378,21 @@ body {
 
 .mavs-title {
     color: var(--mavs-accent);
+}
+
+/* MTP Card */
+.card-mtp {
+    background: linear-gradient(145deg, #2a2520 0%, #1d1a18 100%);
+    border-color: rgba(201, 168, 108, 0.3);
+}
+
+.card-mtp:hover {
+    border-color: var(--mtp-accent);
+    box-shadow: 0 0 30px rgba(201, 168, 108, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.mtp-title {
+    color: var(--mtp-accent);
 }
 
 /* Footer */
