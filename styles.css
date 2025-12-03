@@ -1,0 +1,489 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0d0d0f;
+    color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* Landing Page Container */
+.landing-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(ellipse at center, #423328 0%, #1a1512 40%, #0d0d0f 70%, #0d0d0f 100%);
+    padding: 0 20px;
+    padding-bottom: 40px;
+}
+
+/* Medallion Container */
+.medallion-container {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.medallion {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 40px rgba(237, 182, 69, 0.3));
+}
+
+.medallion-outer-ring {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #EDB645 0%, #EAA542 100%);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse-glow 3s ease-in-out infinite;
+    box-shadow: 0 0 30px rgba(237, 182, 69, 0.5), 0 0 60px rgba(237, 182, 69, 0.3);
+}
+
+.medallion-inner-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #192029;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.medallion-inner-ring::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    border-radius: 50%;
+    border: 2px solid #EDB645;
+    opacity: 0.6;
+    animation: rotate-ring 20s linear infinite;
+}
+
+.medallion-core {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, #1f2a35 0%, #192029 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-mark {
+    width: 65px;
+    height: 65px;
+}
+
+.crateso-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.medallion-text {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+}
+
+.node {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #EDB645;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(237, 182, 69, 0.8);
+}
+
+.node-1 {
+    top: 35px;
+    right: 55px;
+}
+
+.node-2 {
+    bottom: 50px;
+    right: 30px;
+}
+
+/* Brand Section */
+.brand-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.brand-title {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 12px;
+    color: #f8f8f8;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 20px;
+    font-weight: 500;
+    color: #EAA542;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #EAA542, transparent);
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(234, 165, 66, 0.5);
+}
+
+/* Select Product Label */
+.select-product-label {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: rgba(156, 156, 164, 0.8);
+    text-transform: uppercase;
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+/* Base Card Styles */
+.card {
+    width: 260px;
+    height: 380px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 20px;
+    height: 100%;
+}
+
+/* EmployeeGM Card */
+.card-employeegm {
+    background: #1A1A1F;
+    border: 3px solid #EAA542;
+    box-shadow: 0 0 25px rgba(234, 165, 66, 0.4), 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card-employeegm:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(234, 165, 66, 0.6), 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+.selected-indicator {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 32px;
+    height: 32px;
+    background: #EAA542;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(234, 165, 66, 0.6);
+}
+
+.selected-indicator svg {
+    width: 18px;
+    height: 18px;
+}
+
+.icon-block {
+    width: 70px;
+    height: 70px;
+    background: #202028;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.employee-icon {
+    width: 42px;
+    height: 42px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #EAA542;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.sub-copy {
+    text-align: center;
+    color: #E3E3E6;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.sub-copy .spacer {
+    height: 8px;
+}
+
+/* Kiva Card */
+.card-kiva {
+    background: #1d1817;
+    border: 2px solid rgba(100, 100, 110, 0.4);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card-kiva:hover {
+    transform: scale(1.02);
+    border-color: rgba(140, 140, 150, 0.6);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+.app-icon {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 20px rgba(237, 182, 69, 0.3));
+}
+
+.kiva-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.kiva-name {
+    color: #f6f2ea !important;
+    text-transform: none !important;
+    letter-spacing: 1px !important;
+}
+
+.kiva-tagline {
+    text-align: center;
+    color: #d8d8de;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.platform-desc {
+    font-size: 10px;
+    color: #b0b0b6;
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.store-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.store-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #000;
+    border: none;
+    border-radius: 999px;
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.store-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.store-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.small-text {
+    font-size: 7px;
+    color: #aaa;
+}
+
+.big-text {
+    font-size: 11px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Coming Soon Card */
+.card-coming-soon {
+    background: #1A1A1F;
+    border: 2px dashed #52525a;
+    opacity: 0.7;
+    cursor: default;
+}
+
+.card-coming-soon:hover {
+    opacity: 0.75;
+}
+
+.clock-icon {
+    width: 60px;
+    height: 60px;
+    color: rgba(130, 130, 140, 0.8);
+    margin-bottom: 20px;
+    margin-top: 24px;
+}
+
+.clock-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.coming-headline {
+    font-size: 18px;
+    color: rgba(130, 130, 140, 0.8);
+    text-align: center;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.coming-sub {
+    text-align: center;
+    color: rgba(160, 160, 170, 0.5);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 30px rgba(237, 182, 69, 0.5), 0 0 60px rgba(237, 182, 69, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(237, 182, 69, 0.7), 0 0 80px rgba(237, 182, 69, 0.4);
+    }
+}
+
+@keyframes rotate-ring {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .landing-page {
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .medallion-container {
+        margin-top: 40px;
+    }
+
+    .medallion {
+        width: 220px;
+        height: 220px;
+    }
+
+    .medallion-outer-ring {
+        width: 200px;
+        height: 200px;
+    }
+
+    .medallion-core {
+        width: 160px;
+        height: 160px;
+    }
+
+    .logo-mark {
+        width: 60px;
+        height: 60px;
+    }
+
+    .medallion-text {
+        font-size: 12px;
+    }
+
+    .brand-title {
+        font-size: 32px;
+        letter-spacing: 8px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin-top: 24px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        min-height: 480px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1600px) and (min-height: 900px) {
+    .landing-page {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
