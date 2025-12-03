@@ -174,8 +174,15 @@ body {
     font-size: 18px;
     line-height: 1.7;
     color: var(--tag-text);
-    margin-bottom: 40px;
+    margin-bottom: 16px;
     opacity: 0.9;
+}
+
+.hero-subtext {
+    font-size: 15px;
+    color: var(--tag-primary);
+    margin-bottom: 40px;
+    font-style: italic;
 }
 
 .hero-buttons {
@@ -495,12 +502,22 @@ section {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .games-grid {
+    .games-grid,
+    .ratings-grid,
+    .philosophy-grid {
         grid-template-columns: 1fr;
     }
     
     .steps {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .playlab-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .process-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -516,4 +533,376 @@ section {
     .nav-links {
         display: none;
     }
+    
+    .playlab-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .notify-form {
+        flex-direction: column;
+    }
+}
+
+/* Mission Section */
+.mission {
+    text-align: center;
+    padding: 80px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-text {
+    font-size: 22px;
+    line-height: 1.7;
+    color: var(--tag-text);
+}
+
+.mission-text strong {
+    color: var(--tag-primary);
+}
+
+/* Rating System Section */
+.rating-system {
+    padding: 100px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ratings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.rating-card {
+    background: var(--tag-bg-light);
+    border-radius: 24px;
+    padding: 36px;
+    border: 1px solid rgba(255, 107, 107, 0.15);
+}
+
+.rating-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.rating-emoji {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.rating-header h3 {
+    font-size: 24px;
+    color: var(--tag-primary);
+    margin-bottom: 8px;
+}
+
+.rating-scale {
+    font-size: 14px;
+    color: var(--tag-text-muted);
+}
+
+.rating-question {
+    text-align: center;
+    font-size: 15px;
+    color: var(--tag-text);
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.rating-levels {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.level {
+    display: flex;
+    gap: 16px;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    align-items: center;
+}
+
+.level-value {
+    font-weight: 700;
+    color: var(--tag-primary);
+    min-width: 70px;
+    font-size: 14px;
+}
+
+.level-desc {
+    font-size: 13px;
+    color: var(--tag-text-muted);
+}
+
+.rating-subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: var(--tag-text-muted);
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Philosophy Section */
+.philosophy {
+    padding: 100px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.philosophy-card {
+    background: var(--tag-bg-light);
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 107, 107, 0.1);
+}
+
+.philosophy-card h3 {
+    font-size: 18px;
+    color: var(--tag-text);
+    margin-bottom: 12px;
+}
+
+.philosophy-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--tag-text-muted);
+}
+
+/* TAG Team Section */
+.tag-team {
+    background: var(--tag-bg-light);
+    border-radius: 32px;
+    padding: 80px 60px;
+    margin: 60px 40px;
+    max-width: calc(1200px - 80px);
+}
+
+.team-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-intro {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.team-intro p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--tag-text-muted);
+    margin-bottom: 16px;
+}
+
+.team-intro .highlight {
+    color: var(--tag-primary);
+    font-weight: 600;
+}
+
+.process h3 {
+    font-size: 22px;
+    color: var(--tag-text);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.process > p {
+    text-align: center;
+    font-size: 15px;
+    color: var(--tag-text-muted);
+    margin-bottom: 32px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.process-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.process-item .emoji {
+    font-size: 24px;
+}
+
+.process-item span:last-child {
+    font-size: 14px;
+    color: var(--tag-text-muted);
+}
+
+.process-note {
+    text-align: center;
+    font-size: 14px;
+    color: var(--tag-primary);
+    font-style: italic;
+}
+
+/* PlayLab Section */
+.playlab {
+    padding: 100px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.playlab-content {
+    margin-top: 48px;
+}
+
+.playlab-intro {
+    margin-bottom: 48px;
+}
+
+.playlab-intro p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--tag-text-muted);
+    margin-bottom: 16px;
+}
+
+.playlab-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.detail-card {
+    background: var(--tag-bg-light);
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.detail-card h4 {
+    font-size: 16px;
+    color: var(--tag-text);
+    margin-bottom: 8px;
+}
+
+.detail-card p {
+    font-size: 13px;
+    color: var(--tag-text-muted);
+}
+
+.playlab-promise {
+    background: var(--tag-bg-light);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 32px;
+}
+
+.playlab-promise h3 {
+    font-size: 20px;
+    color: var(--tag-primary);
+    margin-bottom: 16px;
+}
+
+.playlab-promise p {
+    font-size: 15px;
+    color: var(--tag-text-muted);
+    margin-bottom: 12px;
+}
+
+.playlab-promise .emphasis {
+    color: var(--tag-primary);
+    font-weight: 600;
+}
+
+.playlab-tagline {
+    font-size: 18px;
+    color: var(--tag-primary);
+    font-style: italic;
+    margin-top: 32px;
+}
+
+/* Games Section */
+.games {
+    padding: 100px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.games-preview {
+    margin: 48px 0;
+}
+
+.game-placeholder {
+    background: var(--tag-bg-light);
+    padding: 60px 40px;
+    border-radius: 24px;
+    border: 2px dashed rgba(255, 107, 107, 0.3);
+}
+
+.coming-soon {
+    display: inline-block;
+    background: var(--tag-primary);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.game-placeholder p {
+    font-size: 15px;
+    color: var(--tag-text-muted);
+    margin-bottom: 12px;
+}
+
+.notify-form {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.notify-form input {
+    flex: 1;
+    padding: 16px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    background: var(--tag-bg-light);
+    color: var(--tag-text);
+    font-size: 15px;
+}
+
+.notify-form input:focus {
+    outline: none;
+    border-color: var(--tag-primary);
+}
+
+/* Footer additions */
+.footer-tagline {
+    font-size: 13px;
+    color: var(--tag-primary);
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.age-notice {
+    color: var(--tag-primary);
+    font-weight: 600;
+    margin-top: 8px;
 }
