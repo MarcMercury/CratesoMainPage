@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Practices - MAVS | Crateso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../shared/legal.css">
+    <style>
+        :root {
+            --accent-primary: #00D4FF;
+            --accent-secondary: #00A8CC;
+            --accent-gradient: linear-gradient(135deg, #00D4FF 0%, #00A8CC 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, .legal-nav {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        code {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="legal-nav">
+        <a href="index.html" class="back-link">← Back to MAVS</a>
+        <div class="legal-nav-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <main class="legal-container">
+        <header class="legal-header">
+            <h1>Best Practices</h1>
+            <p class="effective-date">MAVS Setup & Usage Guide</p>
+        </header>
+
+        <article class="legal-content">
+            <section>
+                <h2>🚀 Quick Start</h2>
+                <p>Get your MAVS device up and running in minutes:</p>
+                <ol>
+                    <li>Charge your MAVS device fully before first use</li>
+                    <li>Download the MAVS companion app (iOS/Android/Desktop)</li>
+                    <li>Pair via Bluetooth using the pairing button</li>
+                    <li>Configure your first AI agent</li>
+                    <li>Say the wake word and start talking!</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>🔧 Hardware Setup</h2>
+                <h3>Optimal Placement</h3>
+                <ul>
+                    <li>Place MAVS on a stable, flat surface</li>
+                    <li>Position 2-6 feet from your typical speaking position</li>
+                    <li>Avoid placing near loud speakers or HVAC vents</li>
+                    <li>Keep away from direct sunlight and heat sources</li>
+                </ul>
+
+                <h3>Connectivity</h3>
+                <ul>
+                    <li><strong>Bluetooth:</strong> Best for mobile use and portability</li>
+                    <li><strong>WiFi:</strong> Recommended for stationary use and lower latency</li>
+                    <li><strong>USB-C:</strong> Direct connection for developers and lowest latency</li>
+                </ul>
+
+                <h3>Battery Care</h3>
+                <ul>
+                    <li>Use the included charger or Qi wireless charging</li>
+                    <li>Avoid complete discharge—charge when below 20%</li>
+                    <li>Firmware optimizes battery during overnight charging</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🤖 Agent Configuration</h2>
+                <h3>Setting Up Agents</h3>
+                <ul>
+                    <li>Use the app to add AI agents (OpenAI, Claude, Gemini, etc.)</li>
+                    <li>Enter your API keys—they're encrypted on-device</li>
+                    <li>Assign each agent to a ring position (1-4)</li>
+                    <li>Customize wake words for each agent (optional)</li>
+                </ul>
+
+                <h3>Recommended Agent Setups</h3>
+                <ul>
+                    <li><strong>Development:</strong> Coding assistant + Documentation + Git helper</li>
+                    <li><strong>Productivity:</strong> Calendar + Email + Task manager + Notes</li>
+                    <li><strong>Smart Home:</strong> Lights + Climate + Security + Media</li>
+                    <li><strong>Creative:</strong> Writing assistant + Research + Brainstorming</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🎙️ Voice Interaction Tips</h2>
+                <h3>Speaking Naturally</h3>
+                <ul>
+                    <li>Speak at normal volume—MAVS has sensitive microphones</li>
+                    <li>Don't shout or whisper; natural speech works best</li>
+                    <li>Brief pauses help with command recognition</li>
+                    <li>Feel free to speak in full sentences</li>
+                </ul>
+
+                <h3>Switching Agents</h3>
+                <ul>
+                    <li><strong>Touch Ring:</strong> Rotate to select, tap to confirm</li>
+                    <li><strong>Voice Switch:</strong> Say "Switch to [agent name]"</li>
+                    <li><strong>Quick Switch:</strong> Double-tap to return to last agent</li>
+                </ul>
+
+                <h3>Commands & Feedback</h3>
+                <ul>
+                    <li>LED color indicates active agent</li>
+                    <li>Haptic feedback confirms agent switches</li>
+                    <li>Say "Cancel" to abort a command</li>
+                    <li>Hold the mute button for instant privacy</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>💻 Developer Guide</h2>
+                <h3>SDK Installation</h3>
+                <p>Install the MAVS SDK for your preferred language:</p>
+                <ul>
+                    <li>Python: <code>pip install mavs-sdk</code></li>
+                    <li>JavaScript: <code>npm install @crateso/mavs</code></li>
+                    <li>Swift: Add via Swift Package Manager</li>
+                    <li>Kotlin: Add via Gradle</li>
+                </ul>
+
+                <h3>API Best Practices</h3>
+                <ul>
+                    <li>Use WebSocket connections for real-time events</li>
+                    <li>Implement proper error handling and reconnection logic</li>
+                    <li>Cache agent configurations locally for faster startup</li>
+                    <li>Use the event system for responsive UI updates</li>
+                </ul>
+
+                <h3>Custom Agents</h3>
+                <ul>
+                    <li>Implement the <code>MAVSAgent</code> interface</li>
+                    <li>Handle voice input as audio stream or transcribed text</li>
+                    <li>Return responses as text or audio stream</li>
+                    <li>Register your agent with the MAVS runtime</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🔒 Security Best Practices</h2>
+                <h3>Account Security</h3>
+                <ul>
+                    <li>Use a strong, unique password for your MAVS account</li>
+                    <li>Enable two-factor authentication</li>
+                    <li>Review connected devices periodically</li>
+                    <li>Revoke access for devices you no longer use</li>
+                </ul>
+
+                <h3>API Key Management</h3>
+                <ul>
+                    <li>Never share your API keys or screenshots showing them</li>
+                    <li>Use environment variables in development</li>
+                    <li>Rotate keys periodically, especially if compromised</li>
+                    <li>Set spending limits on AI provider accounts</li>
+                </ul>
+
+                <h3>Privacy Settings</h3>
+                <ul>
+                    <li>Review voice history settings—off by default</li>
+                    <li>Use the mute button in sensitive environments</li>
+                    <li>Disable agents you're not actively using</li>
+                    <li>Audit connected third-party services regularly</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🛠️ Troubleshooting</h2>
+                <h3>Connection Issues</h3>
+                <ul>
+                    <li>Ensure Bluetooth/WiFi is enabled on your device</li>
+                    <li>Move closer to your router for WiFi</li>
+                    <li>Restart MAVS by holding power for 10 seconds</li>
+                    <li>Re-pair the device in the app if needed</li>
+                </ul>
+
+                <h3>Voice Recognition Problems</h3>
+                <ul>
+                    <li>Check for obstructions over the microphones</li>
+                    <li>Reduce background noise if possible</li>
+                    <li>Retrain the wake word in quiet environment</li>
+                    <li>Update to the latest firmware</li>
+                </ul>
+
+                <h3>Agent Response Issues</h3>
+                <ul>
+                    <li>Verify your API keys are valid and have credits</li>
+                    <li>Check internet connectivity</li>
+                    <li>Try switching to a different agent to isolate the issue</li>
+                    <li>Review agent logs in the app for errors</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🔄 Firmware Updates</h2>
+                <ul>
+                    <li>Keep firmware updated for best performance and security</li>
+                    <li>Updates are downloaded over WiFi automatically</li>
+                    <li>Installation requires user confirmation (unless critical security)</li>
+                    <li>Don't disconnect power during updates</li>
+                    <li>Check release notes in the app for new features</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🆘 Getting Help</h2>
+                <h3>Support Resources</h3>
+                <ul>
+                    <li><strong>Documentation:</strong> docs.crateso.com/mavs</li>
+                    <li><strong>Developer Discord:</strong> discord.gg/crateso</li>
+                    <li><strong>GitHub Issues:</strong> github.com/crateso/mavs-sdk</li>
+                    <li><strong>Email Support:</strong> <a href="mailto:support@crateso.com">support@crateso.com</a></li>
+                </ul>
+
+                <h3>Before Contacting Support</h3>
+                <ul>
+                    <li>Note your firmware version (Settings → About)</li>
+                    <li>Describe steps to reproduce the issue</li>
+                    <li>Include error messages if any</li>
+                    <li>Try basic troubleshooting first</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>✨ Pro Tips</h2>
+                <ul>
+                    <li>Create agent shortcuts for common multi-step tasks</li>
+                    <li>Use the companion app widgets for quick access</li>
+                    <li>Join the developer community for integration ideas</li>
+                    <li>Experiment with the SDK to create custom experiences</li>
+                    <li>Provide feedback—we're constantly improving MAVS!</li>
+                </ul>
+                <p class="highlight">Happy building with MAVS! 🎙️</p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="legal-footer">
+        <p>&copy; 2025 Crateso. All rights reserved.</p>
+    </footer>
+</body>
+</html>

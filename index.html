@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crateso - Make Them Think</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <main class="landing-page">
+        <!-- Top Logo Medallion -->
+        <div class="medallion-container">
+            <div class="medallion">
+                <div class="medallion-glow"></div>
+                <svg class="medallion-rings" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="outer-ring" cx="150" cy="150" r="140" fill="none" stroke="url(#goldGradient)" stroke-width="6"/>
+                    <circle class="inner-ring" cx="150" cy="150" r="125" fill="none" stroke="url(#goldGradient)" stroke-width="2" stroke-dasharray="200 30 150 30"/>
+                    <circle class="ring-node" cx="230" cy="80" r="6" fill="#EDB645"/>
+                    <circle class="ring-node" cx="200" cy="240" r="6" fill="#EDB645"/>
+                    <circle cx="150" cy="150" r="115" fill="url(#innerBg)"/>
+                    <defs>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#EDB645"/>
+                            <stop offset="100%" stop-color="#EAA542"/>
+                        </linearGradient>
+                        <radialGradient id="innerBg" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#252d38"/>
+                            <stop offset="100%" stop-color="#192029"/>
+                        </radialGradient>
+                    </defs>
+                </svg>
+                <div class="medallion-content">
+                    <svg class="logo-mark" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M40 8 C18 8 8 28 8 40 C8 52 18 72 40 72 C50 72 58 68 64 62" 
+                              fill="none" stroke="url(#logoGold)" stroke-width="8" stroke-linecap="round"/>
+                        <circle cx="52" cy="28" r="4" fill="#EDB645"/>
+                        <rect x="48" y="36" width="6" height="20" rx="3" fill="#EDB645"/>
+                        <defs>
+                            <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#EDB645"/>
+                                <stop offset="100%" stop-color="#EAA542"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="medallion-text">CRATESO</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brand Title & Tagline -->
+        <div class="brand-section">
+            <h1 class="brand-title">CRATESO</h1>
+            <p class="brand-tagline">Make Them Think</p>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Select a Product Label -->
+        <p class="select-label">SELECT A PRODUCT</p>
+
+        <!-- Product Cards Grid -->
+        <div class="cards-container">
+            <!-- Kiva Card -->
+            <a href="products/kiva/index.html" class="card card-kiva">
+                <div class="card-content">
+                    <div class="card-icon-img">
+                        <img src="Public/Kiva Emoji.png" alt="Kiva">
+                    </div>
+                    <h2 class="card-title kiva-title">Kiva</h2>
+                    <p class="card-tagline-text">Connection without the Noise</p>
+                    <div class="card-features">
+                        <span>Connection</span>
+                        <span>Clarity</span>
+                        <span>Peace</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Everloop Card -->
+            <a href="products/everloop/index.html" class="card card-everloop">
+                <div class="card-content">
+                    <div class="card-icon-img">
+                        <img src="Public/Everloop Logo.png" alt="Everloop">
+                    </div>
+                    <h2 class="card-title everloop-title">Everloop</h2>
+                    <p class="card-tagline-text">Your Storyworld OS</p>
+                    <div class="card-features">
+                        <span>Personal Arcs</span>
+                        <span>Reflection Loops</span>
+                        <span>Worldbuilding</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- EmployeeGM Card -->
+            <a href="products/employeegm/index.html" class="card card-employeegm">
+                <div class="card-content">
+                    <div class="card-icon-img">
+                        <img src="Public/EmployeeGM Logo.png" alt="EmployeeGM">
+                    </div>
+                    <h2 class="card-title employeegm-title">EmployeeGM</h2>
+                    <p class="card-tagline-text">Better performance through empowerment</p>
+                    <div class="card-features">
+                        <span>Employee Empowerment</span>
+                        <span>Skill Based Management</span>
+                        <span>Automated Growth</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- TAG Card -->
+            <div class="card card-tag" onclick="showAgeVerification()" style="cursor: pointer;">
+                <div class="card-content">
+                    <div class="card-icon-img">
+                        <img src="Public/TAG Logo.png" alt="TAG">
+                    </div>
+                    <h2 class="card-title tag-title">TAG</h2>
+                    <p class="card-tagline-text">Trusted Adult Games</p>
+                    <div class="card-features">
+                        <span>Truth Games</span>
+                        <span>Trust Rituals</span>
+                        <span>Multi-Player</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hi Fu Mi Card -->
+            <a href="products/hifumi/index.html" class="card card-hifumi">
+                <div class="card-content">
+                    <div class="card-icon-img">
+                        <img src="Public/HiFuMe.png" alt="Hi Fu Mi">
+                    </div>
+                    <h2 class="card-title hifumi-title">Hi Fu Mi</h2>
+                    <p class="card-tagline-text">Story & Gaming Universe</p>
+                    <div class="card-features">
+                        <span>Rich Lore</span>
+                        <span>Collectibles</span>
+                        <span>Epic Battles</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- MAVS Card -->
+            <a href="products/mavs/index.html" class="card card-mavs">
+                <div class="card-content">
+                    <div class="card-icon-img">
+                        <img src="Public/MAVS Logo.png" alt="MAVS">
+                    </div>
+                    <h2 class="card-title mavs-title">MAVS</h2>
+                    <p class="card-tagline-text">Multi-Agent Voice Switcher</p>
+                    <div class="card-features">
+                        <span>Voice Control</span>
+                        <span>AI Routing</span>
+                        <span>Zero-Typing</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p>&copy; 2025 Crateso. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Age Verification Modal for TAG -->
+    <div id="ageModal" class="age-modal">
+        <div class="age-modal-content">
+            <div class="age-modal-icon">🔞</div>
+            <h2>Age Verification Required</h2>
+            <p>You must be 21 years or older to access Trusted Adult Games (TAG).</p>
+            <p class="age-modal-question">Are you 21 or older?</p>
+            <div class="age-modal-buttons">
+                <button class="age-btn age-btn-yes" onclick="verifyAge(true)">Yes, I'm 21+</button>
+                <button class="age-btn age-btn-no" onclick="verifyAge(false)">No, I'm under 21</button>
+            </div>
+            <p class="age-modal-disclaimer">By clicking "Yes", you confirm that you are of legal age to view adult content in your jurisdiction.</p>
+        </div>
+    </div>
+
+    <script>
+        function showAgeVerification() {
+            document.getElementById('ageModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function verifyAge(isOfAge) {
+            if (isOfAge) {
+                // User verified as 21+
+                document.getElementById('ageModal').classList.remove('active');
+                document.body.style.overflow = '';
+                window.location.href = 'products/tag/index.html';
+            } else {
+                // User is under 21
+                document.getElementById('ageModal').classList.remove('active');
+                document.body.style.overflow = '';
+                alert('You must be 21 or older to access this content.');
+            }
+        }
+
+        // Close modal if clicking outside
+        document.getElementById('ageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+    
+    <!-- Supabase Config -->
+    <script src="js/supabase-config.js"></script>
+</body>
+</html>

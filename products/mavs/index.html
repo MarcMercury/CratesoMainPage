@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAVS - Multi-Agent Voice Switcher | Crateso</title>
+    <meta name="description" content="MAVS is a hardware + software solution for seamless multi-agent voice interaction and switching.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="scan-line"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <span class="logo-icon">←</span>
+            <span>Back to Crateso</span>
+        </a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#hardware">Hardware</a>
+            <a href="#developers">Developers</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="#order" class="nav-cta">Pre-Order</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">COMING SOON</div>
+            <div class="hero-icon">
+                <img src="../../Public/MAVS Logo.png" alt="MAVS">
+            </div>
+            <h1 class="hero-title">MAVS</h1>
+            <p class="hero-tagline">Multi-Agent Voice Switcher</p>
+            <p class="hero-description">
+                Seamlessly switch between AI agents with a single touch. Hardware-accelerated 
+                voice processing meets intelligent agent routing.
+            </p>
+            <div class="hero-buttons">
+                <a href="#order" class="btn btn-primary">Pre-Order Now</a>
+                <a href="#developers" class="btn btn-secondary">View API Docs</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="device-preview">
+                <div class="device-ring ring-1"></div>
+                <div class="device-ring ring-2"></div>
+                <div class="device-ring ring-3"></div>
+                <div class="device-core">
+                    <span class="pulse-dot"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <h3>Voice Processing</h3>
+                <p>Real-time voice capture with noise cancellation and local preprocessing</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Agent Switching</h3>
+                <p>Instant switching between AI agents with haptic feedback confirmation</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Low Latency</h3>
+                <p>Sub-10ms hardware latency for natural conversation flow</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Privacy First</h3>
+                <p>On-device wake word detection. Your voice stays private until you activate</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔌</div>
+                <h3>Universal Compatibility</h3>
+                <p>Works with major AI platforms: OpenAI, Claude, Gemini, and custom agents</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📡</div>
+                <h3>Wireless Freedom</h3>
+                <p>Bluetooth 5.3 with 12-hour battery life and wireless charging</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Section -->
+    <section id="hardware" class="hardware">
+        <h2 class="section-title">Hardware Specs</h2>
+        <div class="specs-container">
+            <div class="specs-visual">
+                <div class="spec-diagram">
+                    <div class="diagram-circle">
+                        <div class="diagram-inner">MAVS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="specs-list">
+                <div class="spec-item">
+                    <span class="spec-label">Processor</span>
+                    <span class="spec-value">ARM Cortex-M7 @ 480MHz</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Audio</span>
+                    <span class="spec-value">4x MEMS Microphones, Beamforming</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Connectivity</span>
+                    <span class="spec-value">BT 5.3, WiFi 6, USB-C</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Battery</span>
+                    <span class="spec-value">800mAh, 12hr active, Qi charging</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Controls</span>
+                    <span class="spec-value">Touch Ring, Haptic Feedback</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Dimensions</span>
+                    <span class="spec-value">65mm × 65mm × 18mm</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developers Section -->
+    <section id="developers" class="developers">
+        <h2 class="section-title">For Developers</h2>
+        <p class="section-subtitle">Full API access to build custom voice experiences</p>
+        
+        <div class="code-preview">
+            <div class="code-header">
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
+                <span class="code-title">mavs-example.py</span>
+            </div>
+            <pre class="code-block"><code><span class="keyword">from</span> <span class="module">mavs</span> <span class="keyword">import</span> <span class="class">MAVSDevice</span>, <span class="class">Agent</span>
+
+<span class="comment"># Initialize MAVS device</span>
+device = <span class="class">MAVSDevice</span>()
+
+<span class="comment"># Register your agents</span>
+device.register_agent(<span class="class">Agent</span>(
+    name=<span class="string">"assistant"</span>,
+    provider=<span class="string">"openai"</span>,
+    model=<span class="string">"gpt-4o"</span>
+))
+
+<span class="comment"># Handle voice input</span>
+<span class="decorator">@device.on_voice</span>
+<span class="keyword">async def</span> <span class="function">handle_voice</span>(audio, agent):
+    response = <span class="keyword">await</span> agent.process(audio)
+    <span class="keyword">return</span> response
+
+device.start()</code></pre>
+        </div>
+
+        <div class="dev-features">
+            <div class="dev-card">
+                <h3>SDKs</h3>
+                <p>Python, JavaScript, Swift, Kotlin</p>
+            </div>
+            <div class="dev-card">
+                <h3>REST API</h3>
+                <p>Full HTTP/WebSocket API</p>
+            </div>
+            <div class="dev-card">
+                <h3>Plugins</h3>
+                <p>VS Code, JetBrains, Neovim</p>
+            </div>
+            <div class="dev-card">
+                <h3>Open Source</h3>
+                <p>Core SDK on GitHub</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="use-cases">
+        <h2 class="section-title">Use Cases</h2>
+        <div class="cases-grid">
+            <div class="case-card">
+                <span class="case-icon">💻</span>
+                <h3>Development</h3>
+                <p>Code assistance, documentation lookup, debugging help</p>
+            </div>
+            <div class="case-card">
+                <span class="case-icon">🏠</span>
+                <h3>Smart Home</h3>
+                <p>Control different systems with dedicated agents</p>
+            </div>
+            <div class="case-card">
+                <span class="case-icon">📊</span>
+                <h3>Productivity</h3>
+                <p>Calendar, email, notes, and task management</p>
+            </div>
+            <div class="case-card">
+                <span class="case-icon">🎨</span>
+                <h3>Creative</h3>
+                <p>Writing, brainstorming, design feedback</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="order">
+        <h2 class="section-title">Pre-Order MAVS</h2>
+        <div class="order-content">
+            <div class="order-card">
+                <h3>MAVS Core</h3>
+                <p class="order-price">$149</p>
+                <ul class="order-features">
+                    <li>MAVS Device</li>
+                    <li>USB-C Cable</li>
+                    <li>Quick Start Guide</li>
+                    <li>1 Year Warranty</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Pre-Order</a>
+            </div>
+            <div class="order-card featured">
+                <div class="featured-badge">BEST VALUE</div>
+                <h3>MAVS Developer Kit</h3>
+                <p class="order-price">$199</p>
+                <ul class="order-features">
+                    <li>Everything in Core</li>
+                    <li>Charging Dock</li>
+                    <li>API Access</li>
+                    <li>Priority Support</li>
+                    <li>Beta Features</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Pre-Order</a>
+            </div>
+            <div class="order-card">
+                <h3>MAVS Enterprise</h3>
+                <p class="order-price">Contact Us</p>
+                <ul class="order-features">
+                    <li>Volume Pricing</li>
+                    <li>Custom Branding</li>
+                    <li>On-Premise Option</li>
+                    <li>Dedicated Support</li>
+                </ul>
+                <a href="mailto:enterprise@crateso.com" class="btn btn-secondary">Contact Sales</a>
+            </div>
+        </div>
+        <p class="order-note">Expected shipping: Q3 2025</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>MAVS</h3>
+                <p>A Crateso Product</p>
+            </div>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="best-practices.html">Best Practices</a>
+                <a href="mailto:support@crateso.com">Contact</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Crateso. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

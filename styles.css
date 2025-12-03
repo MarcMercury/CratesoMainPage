@@ -1,0 +1,601 @@
+/* Base Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold-primary: #EDB645;
+    --gold-secondary: #EAA542;
+    --bg-dark: #0d0d0f;
+    --bg-center: #423328;
+    --text-white: #f8f8f8;
+    --text-light: #E3E3E6;
+    --text-gray: #9c9ca4;
+    --card-bg: #1A1A1F;
+    --card-kiva-bg: #1d1817;
+    --medallion-inner: #192029;
+    --icon-bg: #202028;
+    
+    /* Product accent colors */
+    --kiva-accent: #D4A84B;
+    --everloop-accent: #7B68EE;
+    --employeegm-accent: #EAA542;
+    --tag-accent: #FF6B6B;
+    --hifumi-accent: #4ECDC4;
+    --mavs-accent: #00D4FF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: radial-gradient(ellipse at center, var(--bg-center) 0%, #1a1512 30%, var(--bg-dark) 70%, #080809 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--text-white);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Landing Page Container */
+.landing-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 40px;
+    position: relative;
+}
+
+/* Vignette Effect */
+.landing-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(13, 13, 15, 0.7) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Medallion Container */
+.medallion-container {
+    position: relative;
+    z-index: 1;
+    margin-top: 3vh;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+
+.medallion {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.medallion-glow {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(237, 182, 69, 0.25) 0%, rgba(234, 165, 66, 0.1) 40%, transparent 70%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+}
+
+.medallion-rings {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    animation: rotateRing 60s linear infinite;
+}
+
+@keyframes rotateRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.outer-ring {
+    filter: drop-shadow(0 0 8px rgba(237, 182, 69, 0.6));
+}
+
+.inner-ring {
+    filter: drop-shadow(0 0 4px rgba(237, 182, 69, 0.4));
+}
+
+.ring-node {
+    filter: drop-shadow(0 0 6px rgba(237, 182, 69, 0.8));
+}
+
+.medallion-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.logo-mark {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 10px rgba(237, 182, 69, 0.5));
+}
+
+.medallion-text {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+}
+
+/* Brand Section */
+.brand-section {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+
+.brand-title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 12px;
+    color: var(--text-white);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.brand-tagline {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gold-secondary);
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-secondary), transparent);
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(234, 165, 66, 0.4);
+}
+
+/* Select Label */
+.select-label {
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--text-gray);
+    opacity: 0.8;
+    margin: 16px 0 24px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+/* Cards Container - Grid Layout */
+.cards-container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Base Card Styles */
+.card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid transparent;
+    overflow: hidden;
+    min-height: 320px;
+}
+
+.card:hover {
+    transform: scale(1.03) translateY(-4px);
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 20px;
+}
+
+/* Card Icon Image */
+.card-icon-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: var(--icon-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/* Card Tagline */
+.card-tagline-text {
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* Card Features */
+.card-features {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.card-features span {
+    font-size: 11px;
+    color: var(--text-light);
+    opacity: 0.8;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+/* Individual Card Styles */
+
+/* Kiva Card */
+.card-kiva {
+    background: linear-gradient(145deg, #2a2218 0%, #1d1817 100%);
+    border-color: rgba(212, 168, 75, 0.3);
+}
+
+.card-kiva:hover {
+    border-color: var(--kiva-accent);
+    box-shadow: 0 0 30px rgba(212, 168, 75, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.kiva-title {
+    color: var(--kiva-accent);
+}
+
+/* Everloop Card */
+.card-everloop {
+    background: linear-gradient(145deg, #1f1a2e 0%, #161321 100%);
+    border-color: rgba(123, 104, 238, 0.3);
+}
+
+.card-everloop:hover {
+    border-color: var(--everloop-accent);
+    box-shadow: 0 0 30px rgba(123, 104, 238, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.everloop-title {
+    color: var(--everloop-accent);
+}
+
+/* EmployeeGM Card */
+.card-employeegm {
+    background: linear-gradient(145deg, #252018 0%, #1A1A1F 100%);
+    border-color: rgba(234, 165, 66, 0.3);
+}
+
+.card-employeegm:hover {
+    border-color: var(--employeegm-accent);
+    box-shadow: 0 0 30px rgba(234, 165, 66, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.employeegm-title {
+    color: var(--employeegm-accent);
+}
+
+/* TAG Card */
+.card-tag {
+    background: linear-gradient(145deg, #2a1a1a 0%, #1f1515 100%);
+    border-color: rgba(255, 107, 107, 0.3);
+}
+
+.card-tag:hover {
+    border-color: var(--tag-accent);
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.tag-title {
+    color: var(--tag-accent);
+}
+
+/* Hi Fu Mi Card */
+.card-hifumi {
+    background: linear-gradient(145deg, #1a2a28 0%, #152220 100%);
+    border-color: rgba(78, 205, 196, 0.3);
+}
+
+.card-hifumi:hover {
+    border-color: var(--hifumi-accent);
+    box-shadow: 0 0 30px rgba(78, 205, 196, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hifumi-title {
+    color: var(--hifumi-accent);
+}
+
+/* MAVS Card */
+.card-mavs {
+    background: linear-gradient(145deg, #1a2530 0%, #151d25 100%);
+    border-color: rgba(0, 212, 255, 0.3);
+}
+
+.card-mavs:hover {
+    border-color: var(--mavs-accent);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.mavs-title {
+    color: var(--mavs-accent);
+}
+
+/* Footer */
+.main-footer {
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 340px;
+    }
+    
+    .card {
+        min-height: 280px;
+    }
+    
+    .brand-title {
+        font-size: 28px;
+        letter-spacing: 8px;
+    }
+    
+    .brand-tagline {
+        font-size: 16px;
+    }
+    
+    .medallion {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .medallion-rings {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .medallion-glow {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .logo-mark {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+    .cards-container {
+        gap: 32px;
+        max-width: 1400px;
+    }
+    
+    .card {
+        min-height: 360px;
+    }
+    
+    .card-icon-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .card-title {
+        font-size: 22px;
+    }
+}
+
+/* Age Verification Modal */
+.age-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.age-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.age-modal-content {
+    background: linear-gradient(145deg, #1f1a1a 0%, #2a1f1f 100%);
+    border: 2px solid var(--tag-accent);
+    border-radius: 20px;
+    padding: 48px;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(255, 107, 107, 0.3);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.age-modal-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.age-modal-content h2 {
+    font-size: 28px;
+    color: var(--tag-accent);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.age-modal-content > p {
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.age-modal-question {
+    font-size: 20px !important;
+    font-weight: 600;
+    color: var(--text-white) !important;
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+.age-modal-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.age-btn {
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.age-btn-yes {
+    background: linear-gradient(135deg, var(--tag-accent), #ee5a5a);
+    color: white;
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.age-btn-yes:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.5);
+}
+
+.age-btn-no {
+    background: transparent;
+    color: var(--text-gray);
+    border: 2px solid var(--text-gray);
+}
+
+.age-btn-no:hover {
+    border-color: var(--text-light);
+    color: var(--text-light);
+}
+
+.age-modal-disclaimer {
+    font-size: 12px !important;
+    color: var(--text-gray) !important;
+    line-height: 1.5;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+    .age-modal-content {
+        padding: 32px 24px;
+    }
+    
+    .age-modal-content h2 {
+        font-size: 22px;
+    }
+    
+    .age-modal-buttons {
+        flex-direction: column;
+    }
+    
+    .age-btn {
+        width: 100%;
+    }
+}
