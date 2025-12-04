@@ -134,12 +134,18 @@ body {
     align-items: center;
     justify-content: center;
     gap: 4px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: radial-gradient(circle, #252d38 0%, #192029 100%);
 }
 
 .logo-image {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
     filter: drop-shadow(0 0 10px rgba(237, 182, 69, 0.5));
 }
 
