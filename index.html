@@ -174,14 +174,18 @@
                 <div class="card-content">
                     <div class="card-icon-svg">
                         <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="8" y="28" width="44" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/>
-                            <path d="M18 28V22C18 18 22 14 30 14C38 14 42 18 42 22V28" fill="none" stroke="currentColor" stroke-width="2.5"/>
-                            <rect x="14" y="36" width="8" height="6" rx="1" fill="currentColor"/>
-                            <rect x="26" y="36" width="8" height="6" rx="1" fill="currentColor"/>
-                            <rect x="38" y="36" width="8" height="6" rx="1" fill="currentColor"/>
-                            <circle cx="18" cy="48" r="2" fill="currentColor"/>
-                            <circle cx="30" cy="48" r="2" fill="currentColor"/>
-                            <circle cx="42" cy="48" r="2" fill="currentColor"/>
+                            <!-- Outer diamond/gem shape -->
+                            <path d="M30 6 L50 20 L50 40 L30 54 L10 40 L10 20 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <!-- Inner facets -->
+                            <path d="M30 6 L30 54" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                            <path d="M10 20 L50 40" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                            <path d="M50 20 L10 40" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                            <!-- Center spark/star -->
+                            <circle cx="30" cy="30" r="6" fill="currentColor" opacity="0.9"/>
+                            <path d="M30 18 L30 24 M30 36 L30 42 M22 30 L18 30 M38 30 L42 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Corner accents -->
+                            <circle cx="30" cy="6" r="2" fill="currentColor"/>
+                            <circle cx="30" cy="54" r="2" fill="currentColor"/>
                         </svg>
                     </div>
                     <h2 class="card-title oneoff-title">One-Off Projects</h2>
