@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=4">
     
     <!-- Supabase CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -56,7 +56,31 @@
             
             <!-- Stories & Games Category -->
             <div class="category-tile" data-category="stories" onclick="expandCategory(this)">
-                <div class="category-icon">🎮</div>
+                <div class="category-icon">
+                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Abstract narrative spiral/portal with playing elements -->
+                        <defs>
+                            <linearGradient id="storiesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#4ECDC4"/>
+                                <stop offset="50%" stop-color="#7B68EE"/>
+                                <stop offset="100%" stop-color="#FF6B6B"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Outer narrative ring -->
+                        <circle cx="40" cy="40" r="32" fill="none" stroke="url(#storiesGrad)" stroke-width="2" opacity="0.4"/>
+                        <!-- Spiral path representing story journey -->
+                        <path d="M40 12 Q60 20 55 40 Q50 55 40 55 Q28 55 25 40 Q22 28 35 25 Q42 23 44 32" 
+                              fill="none" stroke="url(#storiesGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                        <!-- Abstract dice/game element -->
+                        <rect x="32" y="32" width="16" height="16" rx="3" fill="none" stroke="url(#storiesGrad)" stroke-width="2" transform="rotate(15 40 40)"/>
+                        <circle cx="37" cy="37" r="1.5" fill="url(#storiesGrad)"/>
+                        <circle cx="43" cy="43" r="1.5" fill="url(#storiesGrad)"/>
+                        <!-- Sparkle accents -->
+                        <circle cx="22" cy="25" r="2" fill="#4ECDC4" opacity="0.8"/>
+                        <circle cx="58" cy="52" r="1.5" fill="#FF6B6B" opacity="0.8"/>
+                        <circle cx="52" cy="20" r="1.5" fill="#7B68EE" opacity="0.6"/>
+                    </svg>
+                </div>
                 <h2 class="category-title">Stories & Games</h2>
                 <p class="category-desc">Immersive worlds & playful experiences</p>
                 <div class="category-products-preview">
@@ -68,7 +92,37 @@
 
             <!-- Productivity & Communication Category -->
             <div class="category-tile" data-category="productivity" onclick="expandCategory(this)">
-                <div class="category-icon">⚡</div>
+                <div class="category-icon">
+                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Abstract network/connection nodes with flow -->
+                        <defs>
+                            <linearGradient id="prodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#EDB645"/>
+                                <stop offset="100%" stop-color="#00D4FF"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Central hub -->
+                        <circle cx="40" cy="40" r="8" fill="none" stroke="url(#prodGrad)" stroke-width="2.5"/>
+                        <circle cx="40" cy="40" r="3" fill="url(#prodGrad)"/>
+                        <!-- Connection lines radiating out -->
+                        <line x1="40" y1="32" x2="40" y2="18" stroke="url(#prodGrad)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="47" y1="35" x2="58" y2="24" stroke="url(#prodGrad)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="48" y1="40" x2="62" y2="40" stroke="url(#prodGrad)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="47" y1="45" x2="58" y2="56" stroke="url(#prodGrad)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="33" y1="45" x2="22" y2="56" stroke="url(#prodGrad)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="32" y1="40" x2="18" y2="40" stroke="url(#prodGrad)" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Outer nodes -->
+                        <circle cx="40" cy="15" r="4" fill="none" stroke="#EDB645" stroke-width="1.5"/>
+                        <circle cx="61" cy="22" r="3" fill="#EDB645" opacity="0.8"/>
+                        <circle cx="65" cy="40" r="4" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+                        <circle cx="61" cy="58" r="3" fill="#00D4FF" opacity="0.8"/>
+                        <circle cx="19" cy="58" r="3" fill="url(#prodGrad)" opacity="0.8"/>
+                        <circle cx="15" cy="40" r="4" fill="none" stroke="#EDB645" stroke-width="1.5"/>
+                        <!-- Pulse rings -->
+                        <circle cx="40" cy="40" r="20" fill="none" stroke="url(#prodGrad)" stroke-width="1" opacity="0.3"/>
+                        <circle cx="40" cy="40" r="28" fill="none" stroke="url(#prodGrad)" stroke-width="0.5" opacity="0.2"/>
+                    </svg>
+                </div>
                 <h2 class="category-title">Productivity & Communication</h2>
                 <p class="category-desc">Tools that empower and connect</p>
                 <div class="category-products-preview">
@@ -80,7 +134,36 @@
 
             <!-- Media & Creative Category -->
             <div class="category-tile" data-category="media" onclick="expandCategory(this)">
-                <div class="category-icon">🎭</div>
+                <div class="category-icon">
+                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Abstract stage/creative lens with artistic elements -->
+                        <defs>
+                            <linearGradient id="mediaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#C9A86C"/>
+                                <stop offset="100%" stop-color="#9CA3AF"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Spotlight/lens shape -->
+                        <ellipse cx="40" cy="42" rx="26" ry="20" fill="none" stroke="url(#mediaGrad)" stroke-width="2" opacity="0.4"/>
+                        <!-- Stage curtain abstract -->
+                        <path d="M18 20 Q25 35 20 55" fill="none" stroke="#C9A86C" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M62 20 Q55 35 60 55" fill="none" stroke="#C9A86C" stroke-width="2.5" stroke-linecap="round"/>
+                        <!-- Top drape -->
+                        <path d="M18 20 Q30 28 40 24 Q50 20 62 20" fill="none" stroke="#C9A86C" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Creative spark/star center -->
+                        <polygon points="40,28 42,36 50,36 44,41 46,49 40,45 34,49 36,41 30,36 38,36" 
+                                 fill="url(#mediaGrad)" opacity="0.9"/>
+                        <!-- Floating creative elements -->
+                        <circle cx="28" cy="38" r="3" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+                        <circle cx="52" cy="38" r="3" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+                        <!-- Light rays from top -->
+                        <line x1="32" y1="16" x2="35" y2="22" stroke="#C9A86C" stroke-width="1" opacity="0.5"/>
+                        <line x1="40" y1="14" x2="40" y2="20" stroke="#C9A86C" stroke-width="1.5" opacity="0.6"/>
+                        <line x1="48" y1="16" x2="45" y2="22" stroke="#C9A86C" stroke-width="1" opacity="0.5"/>
+                        <!-- Base/stage floor -->
+                        <line x1="24" y1="58" x2="56" y2="58" stroke="url(#mediaGrad)" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <h2 class="category-title">Media & Creative</h2>
                 <p class="category-desc">Performance, art & custom builds</p>
                 <div class="category-products-preview">
