@@ -305,13 +305,29 @@ body {
 }
 
 .category-products-preview span {
-    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px 6px 8px;
     background: rgba(237, 182, 69, 0.1);
     border-radius: 20px;
     font-size: 11px;
     color: var(--gold-primary);
     font-weight: 500;
     letter-spacing: 0.5px;
+}
+
+.category-products-preview span img {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.category-products-preview span.has-svg-icon svg {
+    width: 16px;
+    height: 16px;
+    color: var(--oneoff-accent);
 }
 
 /* Category Overlay */
