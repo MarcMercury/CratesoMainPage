@@ -259,21 +259,460 @@
     <!-- Games Section -->
     <section id="games" class="games">
         <h2 class="section-title">Explore Our Games</h2>
-        <p class="section-subtitle">Coming soon — curated experiences for every comfort level</p>
+        <p class="section-subtitle">11 curated experiences — from playful to passionate</p>
         
-        <div class="games-preview">
-            <div class="game-placeholder">
-                <span class="coming-soon">Coming Soon</span>
-                <p>Our first collection of trusted adult games is in final playtesting.</p>
-                <p>Sign up to be notified when we launch.</p>
+        <!-- Access Gate -->
+        <div id="access-gate" class="access-gate">
+            <div class="gate-content">
+                <div class="gate-icon">🔐</div>
+                <h3>Unlock Full Game Details</h3>
+                <p>To view complete rules and details for our games, please verify your information below.</p>
+                
+                <form id="access-form" class="access-form">
+                    <div class="form-group">
+                        <label for="access-name">Full Name</label>
+                        <input type="text" id="access-name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="access-email">Email Address</label>
+                        <input type="email" id="access-email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="access-phone">Phone Number</label>
+                        <input type="tel" id="access-phone" placeholder="(555) 123-4567" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="age-verify" required>
+                            <span class="checkmark"></span>
+                            <span class="label-text">I confirm that I am <strong>21 years or older</strong></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-unlock">
+                        <span>🔓</span> Unlock Games
+                    </button>
+                </form>
+                
+                <p class="gate-disclaimer">Your information is protected and will only be used to verify access. See our <a href="privacy.html">Privacy Policy</a>.</p>
             </div>
         </div>
-        
-        <form class="notify-form">
-            <input type="email" placeholder="Your email" required>
-            <button type="submit" class="btn btn-primary">Notify Me</button>
-        </form>
+
+        <!-- Games Grid (Hidden until verified) -->
+        <div id="games-content" class="games-content hidden">
+            <div class="games-grid">
+                
+                <!-- Game 1: Sexy Jenga -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">🧱</span>
+                        <div class="game-title-block">
+                            <h3>Sexy Jenga</h3>
+                            <span class="game-players">👥 2+ Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">40-80 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-warm">Warm → Steamy</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">30-60 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">Write intimate dares on Jenga blocks. When you pull a block, you complete the dare. If the tower falls, the person responsible performs a "penalty dare" chosen by the group.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>A Jenga set, markers, and imagination</p>
+                        <h4>How It Works</h4>
+                        <p>Each block has a dare written on it — ranging from flirty to spicy. Pull carefully, play boldly. The physical tension of the tower mirrors the tension in the room.</p>
+                    </div>
+                </div>
+
+                <!-- Game 2: Coin Toss Game -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">🪙</span>
+                        <div class="game-title-block">
+                            <h3>Coin Toss Game</h3>
+                            <span class="game-players">👥 2 Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">45-90 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-steamy">Steamy → Hot</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">20-40 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">One partner performs an action for a set amount of time, then flips a coin — heads they continue, tails they switch roles. The randomness creates delicious unpredictability.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>A coin, a timer, and an open mind</p>
+                        <h4>How It Works</h4>
+                        <p>Set a base time (30 seconds to 2 minutes). One person gives pleasure, flips the coin — heads means they keep going another round, tails means roles reverse. The anticipation builds with every flip.</p>
+                    </div>
+                </div>
+
+                <!-- Game 3: Hidden Fantasy -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">📜</span>
+                        <div class="game-title-block">
+                            <h3>Hidden Fantasy</h3>
+                            <span class="game-players">👥 2+ Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">40-80 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-warm">Warm → Hot</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">45-90 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">Each player writes a secret fantasy on paper and drops it in a bowl. Draw one and act it out, or describe how you'd make it happen. No one knows whose fantasy is whose.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>Paper, pens, and a bowl</p>
+                        <h4>How It Works</h4>
+                        <p>The anonymity is the magic. Write fantasies without names — could be yours, could be theirs. When someone draws and reads aloud, watch the room for reactions. Then explore it together.</p>
+                    </div>
+                </div>
+
+                <!-- Game 4: You Laugh – You Strip -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">😂</span>
+                        <div class="game-title-block">
+                            <h3>You Laugh – You Strip</h3>
+                            <span class="game-players">👥 2+ Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">60-90 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-steamy">Playful → Steamy</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">20-45 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">Players take turns trying to make others laugh. If you laugh, you remove one article of clothing. Simple, chaotic, and surprisingly strategic.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>Just yourselves (and maybe some props for maximum chaos)</p>
+                        <h4>How It Works</h4>
+                        <p>The jokester has 30 seconds to make someone crack. Dead-pan stares become a survival skill. Tickling is illegal. The tension between trying not to laugh and wanting to see what happens is exquisite.</p>
+                    </div>
+                </div>
+
+                <!-- Game 5: The Countdown Game -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">⏱️</span>
+                        <div class="game-title-block">
+                            <h3>The Countdown Game</h3>
+                            <span class="game-players">👥 2 Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">70-100 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-hot">Hot → Intense</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">30-60 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">Start at 10. Count down slowly. With each number, intensity increases — touch becomes firmer, whispers become commands, teasing becomes... more. Zero is the crescendo.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>Patience and self-control</p>
+                        <h4>How It Works</h4>
+                        <p>One partner controls the countdown. They can slow down, speed up, or pause — building anticipation. Each number has escalating rules you agree on beforehand. By 3... 2... 1... the wait has been worth it.</p>
+                    </div>
+                </div>
+
+                <!-- Game 6: Midnight Confessions -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">🌙</span>
+                        <div class="game-title-block">
+                            <h3>Midnight Confessions</h3>
+                            <span class="game-players">👥 2+ Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">50-90 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-warm">Intimate → Steamy</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">45-90 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">Dim the lights. Take turns sharing secrets, desires, and confessions. Each revelation earns the listener the right to ask one follow-up question — or perform one action.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>Low lighting, drinks optional, honesty mandatory</p>
+                        <h4>How It Works</h4>
+                        <p>Start with lighter confessions and deepen as comfort grows. "I've always wanted to..." becomes a roadmap. The reward system blurs the line between talking about intimacy and experiencing it.</p>
+                    </div>
+                </div>
+
+                <!-- Game 7: The Other Room -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">🚪</span>
+                        <div class="game-title-block">
+                            <h3>The Other Room</h3>
+                            <span class="game-players">👥 2 Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">70-90 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-hot">Steamy → Hot</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">30-60 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">One partner waits in another room. The other sends text instructions — what to do, what to wear, where to touch. When called in, they must be exactly as directed.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>Two rooms, two phones, and anticipation</p>
+                        <h4>How It Works</h4>
+                        <p>Distance creates tension. The waiting partner follows text commands — changing clothes, positions, mental state. When they finally reunite, the scene has been perfectly set by someone who wasn't even in the room.</p>
+                    </div>
+                </div>
+
+                <!-- Game 8: Would You Rather: After Dark -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">🌃</span>
+                        <div class="game-title-block">
+                            <h3>Would You Rather: After Dark</h3>
+                            <span class="game-players">👥 2+ Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">30-90 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-warm">Warm → Hot</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">30-60 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">The classic question game, but every choice is provocative. "Would you rather give or receive for a full hour?" Choose — then demonstrate your answer.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>Questions prepared (or improvised) and willingness to follow through</p>
+                        <h4>How It Works</h4>
+                        <p>The twist: your answer isn't just theoretical. Choose and then live your choice for 5 minutes. The questions scale from flirty to explicit — and so do the demonstrations.</p>
+                    </div>
+                </div>
+
+                <!-- Game 9: Kama Sutra: The Game -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">🎲</span>
+                        <div class="game-title-block">
+                            <h3>Kama Sutra: The Game</h3>
+                            <span class="game-players">👥 2 Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">60-100 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-hot">Hot → Intense</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">45-90 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">Roll dice to randomly select positions from the Kama Sutra. Hold each position for a set time, then roll again. Explore the ancient art through chance.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>Dice, a position reference guide, and flexibility (physical and mental)</p>
+                        <h4>How It Works</h4>
+                        <p>Number positions 2-12 (for two dice). Roll, find the position, attempt it for 3-5 minutes. Some will be comfortable, some will make you laugh, some will become new favorites. The randomness removes the pressure of choosing.</p>
+                    </div>
+                </div>
+
+                <!-- Game 10: Path of Pleasure -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">🗺️</span>
+                        <div class="game-title-block">
+                            <h3>Path of Pleasure</h3>
+                            <span class="game-players">👥 2 Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">0-100 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-gradient">Full Spectrum</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">60-120 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">A board game that guides you from gentle connection through escalating intimacy. Roll, move, and follow the space's instructions. Some spaces are sweet, some are spicy.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>The game board, dice, and patience for the journey</p>
+                        <h4>How It Works</h4>
+                        <p>The board is a winding path with four zones: Connection, Exploration, Passion, and Climax. Each space has an action. Skip spaces if needed, linger on others. It's not about winning — it's about the path itself.</p>
+                    </div>
+                </div>
+
+                <!-- Game 11: Truth or Dare: Pleasure Deck -->
+                <div class="game-card full-width">
+                    <div class="game-header">
+                        <span class="game-icon">🃏</span>
+                        <div class="game-title-block">
+                            <h3>Truth or Dare: Pleasure Deck</h3>
+                            <span class="game-players">👥 2+ Players</span>
+                        </div>
+                    </div>
+                    <div class="tag-rating">
+                        <div class="rating-item">
+                            <span class="rating-label">Velocity</span>
+                            <span class="rating-value">0-100 mph</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Heat</span>
+                            <span class="rating-value heat-gradient">Full Spectrum</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Duration</span>
+                            <span class="rating-value">30-90 min</span>
+                        </div>
+                    </div>
+                    <p class="game-description">A deck of cards where each card is either a Truth (intimate question) or a Dare (an action). Three heat levels — Warm, Steamy, and Hot — let you control the intensity.</p>
+                    <div class="game-details">
+                        <h4>What You Need</h4>
+                        <p>The Pleasure Deck (or create your own with regular cards)</p>
+                        <h4>How It Works</h4>
+                        <p>Draw a card, choose truth or dare based on its symbol. The color indicates heat level. Start with Warm cards, progress to Steamy, and only pull Hot cards when you're ready. The deck builds naturally from playful to passionate.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="games-footer">
+                <p>All games are TAG-rated for your confidence. Play responsibly, communicate openly, and remember — consent is the foundation of every great game.</p>
+            </div>
+        </div>
     </section>
+
+    <!-- Access Gate Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accessGate = document.getElementById('access-gate');
+            const gamesContent = document.getElementById('games-content');
+            const accessForm = document.getElementById('access-form');
+            
+            // Check if user already has access
+            const hasAccess = localStorage.getItem('tag-access-verified');
+            if (hasAccess) {
+                accessGate.classList.add('hidden');
+                gamesContent.classList.remove('hidden');
+            }
+            
+            // Handle form submission
+            accessForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('access-name').value;
+                const email = document.getElementById('access-email').value;
+                const phone = document.getElementById('access-phone').value;
+                const ageVerified = document.getElementById('age-verify').checked;
+                
+                if (name && email && phone && ageVerified) {
+                    // Store access data (could also send to Supabase here)
+                    localStorage.setItem('tag-access-verified', 'true');
+                    localStorage.setItem('tag-access-data', JSON.stringify({
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        timestamp: new Date().toISOString()
+                    }));
+                    
+                    // Animate the transition
+                    accessGate.style.opacity = '0';
+                    accessGate.style.transform = 'translateY(-20px)';
+                    
+                    setTimeout(() => {
+                        accessGate.classList.add('hidden');
+                        gamesContent.classList.remove('hidden');
+                        gamesContent.style.opacity = '0';
+                        gamesContent.style.transform = 'translateY(20px)';
+                        
+                        setTimeout(() => {
+                            gamesContent.style.opacity = '1';
+                            gamesContent.style.transform = 'translateY(0)';
+                        }, 50);
+                    }, 300);
+                }
+            });
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="footer">

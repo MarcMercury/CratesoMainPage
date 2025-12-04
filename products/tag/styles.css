@@ -893,6 +893,338 @@ section {
     border-color: var(--tag-primary);
 }
 
+/* Access Gate Styles */
+.access-gate {
+    max-width: 500px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.access-gate.hidden {
+    display: none;
+}
+
+.gate-content {
+    background: var(--tag-bg-light);
+    padding: 48px 40px;
+    border-radius: 24px;
+    border: 2px solid rgba(255, 107, 107, 0.2);
+    text-align: center;
+}
+
+.gate-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.gate-content h3 {
+    font-size: 28px;
+    color: var(--tag-text);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.gate-content > p {
+    color: var(--tag-text-muted);
+    font-size: 15px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.access-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--tag-text);
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 107, 107, 0.2);
+    background: rgba(255, 107, 107, 0.05);
+    color: var(--tag-text);
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--tag-primary);
+    background: rgba(255, 107, 107, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--tag-text-muted);
+    opacity: 0.6;
+}
+
+.checkbox-group {
+    margin: 28px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--tag-primary);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.checkbox-label input:checked + .checkmark {
+    background: var(--tag-primary);
+}
+
+.checkbox-label input:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.label-text {
+    font-size: 14px;
+    color: var(--tag-text);
+    line-height: 1.4;
+}
+
+.label-text strong {
+    color: var(--tag-primary);
+}
+
+.btn-unlock {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.gate-disclaimer {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--tag-text-muted);
+    text-align: center;
+}
+
+.gate-disclaimer a {
+    color: var(--tag-primary);
+    text-decoration: none;
+}
+
+.gate-disclaimer a:hover {
+    text-decoration: underline;
+}
+
+/* Games Content (Unlocked) */
+.games-content {
+    transition: all 0.3s ease;
+}
+
+.games-content.hidden {
+    display: none;
+}
+
+.games-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.game-card.full-width {
+    background: var(--tag-bg-light);
+    padding: 32px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 107, 107, 0.1);
+    transition: all 0.3s;
+}
+
+.game-card.full-width:hover {
+    border-color: rgba(255, 107, 107, 0.3);
+    box-shadow: 0 10px 40px rgba(255, 107, 107, 0.1);
+}
+
+.game-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.game-header .game-icon {
+    font-size: 48px;
+    margin: 0;
+}
+
+.game-title-block h3 {
+    font-size: 24px;
+    color: var(--tag-text);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.game-title-block .game-players {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(255, 107, 107, 0.15);
+    border-radius: 16px;
+    font-size: 13px;
+    color: var(--tag-primary);
+    font-weight: 600;
+}
+
+.tag-rating {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.rating-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rating-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--tag-text-muted);
+    font-weight: 600;
+}
+
+.rating-value {
+    font-size: 15px;
+    color: var(--tag-text);
+    font-weight: 600;
+}
+
+.heat-warm {
+    color: #FFB347;
+}
+
+.heat-steamy {
+    color: #FF8C42;
+}
+
+.heat-hot {
+    color: #FF6B6B;
+}
+
+.heat-gradient {
+    background: linear-gradient(90deg, #FFB347, #FF8C42, #FF6B6B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.game-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--tag-text);
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 107, 107, 0.1);
+}
+
+.game-details h4 {
+    font-size: 14px;
+    color: var(--tag-primary);
+    margin-bottom: 8px;
+    margin-top: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.game-details h4:first-child {
+    margin-top: 0;
+}
+
+.game-details p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--tag-text-muted);
+}
+
+.games-footer {
+    margin-top: 48px;
+    padding: 24px 32px;
+    background: rgba(255, 107, 107, 0.1);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.games-footer p {
+    font-size: 15px;
+    color: var(--tag-text);
+    line-height: 1.7;
+}
+
+/* Mobile Adjustments for Games */
+@media (max-width: 768px) {
+    .access-gate {
+        margin: 0 20px;
+    }
+    
+    .gate-content {
+        padding: 32px 24px;
+    }
+    
+    .game-card.full-width {
+        padding: 24px;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .tag-rating {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .rating-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 /* Footer additions */
 .footer-tagline {
     font-size: 13px;
