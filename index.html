@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=3">
     
     <!-- Supabase CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -49,154 +49,158 @@
         </div>
 
         <!-- Select a Product Label -->
-        <p class="select-label">SELECT A PRODUCT</p>
+        <p class="select-label">SELECT A CATEGORY</p>
 
-        <!-- Product Cards Grid -->
-        <div class="cards-container">
-            <!-- Row 1: Kiva, EmployeeGM, MAVS -->
+        <!-- Category Tiles -->
+        <div class="categories-container">
             
-            <!-- Kiva Card -->
-            <a href="products/kiva/index.html" class="card card-kiva">
-                <div class="card-content">
-                    <div class="card-icon-img">
-                        <img src="Public/Kiva Emoji.png" alt="Kiva">
-                    </div>
-                    <h2 class="card-title kiva-title">Kiva</h2>
-                    <p class="card-tagline-text">Connection without the Noise</p>
-                    <div class="card-features">
-                        <span>Connection</span>
-                        <span>Clarity</span>
-                        <span>Peace</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- EmployeeGM Card -->
-            <a href="products/employeegm/index.html" class="card card-employeegm">
-                <div class="card-content">
-                    <div class="card-icon-img">
-                        <img src="Public/EmployeeGM Logo.png" alt="EmployeeGM">
-                    </div>
-                    <h2 class="card-title employeegm-title">EmployeeGM</h2>
-                    <p class="card-tagline-text">Better performance through empowerment</p>
-                    <div class="card-features">
-                        <span>Employee Empowerment</span>
-                        <span>Skill Based Management</span>
-                        <span>Automated Growth</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- MAVS Card -->
-            <a href="products/mavs/index.html" class="card card-mavs">
-                <div class="card-content">
-                    <div class="card-icon-img">
-                        <img src="Public/MAVS Logo.png" alt="MAVS">
-                    </div>
-                    <h2 class="card-title mavs-title">MAVS</h2>
-                    <p class="card-tagline-text">Multi-Agent Voice Switcher</p>
-                    <div class="card-features">
-                        <span>Voice Control</span>
-                        <span>AI Routing</span>
-                        <span>Zero-Typing</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Row 2: Everloop, TAG, Hi Fu Mi, MTP -->
-
-            <!-- Everloop Card -->
-            <a href="products/everloop/index.html" class="card card-everloop">
-                <div class="card-content">
-                    <div class="card-icon-img">
-                        <img src="Public/Everloop Logo.png" alt="Everloop">
-                    </div>
-                    <h2 class="card-title everloop-title">Everloop</h2>
-                    <p class="card-tagline-text">Your Storyworld OS</p>
-                    <div class="card-features">
-                        <span>Personal Arcs</span>
-                        <span>Reflection Loops</span>
-                        <span>Worldbuilding</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- TAG Card -->
-            <div class="card card-tag" onclick="showAgeVerification()" style="cursor: pointer;">
-                <div class="card-content">
-                    <div class="card-icon-img">
-                        <img src="Public/TAG Logo.png" alt="TAG">
-                    </div>
-                    <h2 class="card-title tag-title">TAG</h2>
-                    <p class="card-tagline-text">Trusted Adult Games</p>
-                    <div class="card-features">
-                        <span>Truth Games</span>
-                        <span>Trust Rituals</span>
-                        <span>Multi-Player</span>
-                    </div>
+            <!-- Stories & Games Category -->
+            <div class="category-tile" data-category="stories" onclick="expandCategory(this)">
+                <div class="category-icon">🎮</div>
+                <h2 class="category-title">Stories & Games</h2>
+                <p class="category-desc">Immersive worlds & playful experiences</p>
+                <div class="category-products-preview">
+                    <span>Hi Fu Mi</span>
+                    <span>Everloop</span>
+                    <span>TAG</span>
                 </div>
             </div>
 
-            <!-- Hi Fu Mi Card -->
-            <a href="products/hifumi/index.html" class="card card-hifumi">
-                <div class="card-content">
-                    <div class="card-icon-img">
-                        <img src="Public/HiFuMe.png" alt="Hi Fu Mi">
-                    </div>
-                    <h2 class="card-title hifumi-title">Hi Fu Mi</h2>
-                    <p class="card-tagline-text">Story & Gaming Universe</p>
-                    <div class="card-features">
-                        <span>Rich Lore</span>
-                        <span>Collectibles</span>
-                        <span>Epic Battles</span>
-                    </div>
+            <!-- Productivity & Communication Category -->
+            <div class="category-tile" data-category="productivity" onclick="expandCategory(this)">
+                <div class="category-icon">⚡</div>
+                <h2 class="category-title">Productivity & Communication</h2>
+                <p class="category-desc">Tools that empower and connect</p>
+                <div class="category-products-preview">
+                    <span>EmployeeGM</span>
+                    <span>Kiva</span>
+                    <span>MAVS</span>
                 </div>
-            </a>
+            </div>
 
-            <!-- MTP Card -->
-            <a href="products/mtp/index.html" class="card card-mtp">
-                <div class="card-content">
-                    <div class="card-icon-img">
-                        <img src="Public/MTP Logo.png" alt="Mercury Theatrical Productions">
-                    </div>
-                    <h2 class="card-title mtp-title">Mercury Theatrical</h2>
-                    <p class="card-tagline-text">Live-born experiences for a multi-media world</p>
-                    <div class="card-features">
-                        <span>Live Theatre</span>
-                        <span>Experiential</span>
-                        <span>Multi-Media</span>
-                    </div>
+            <!-- Media & Creative Category -->
+            <div class="category-tile" data-category="media" onclick="expandCategory(this)">
+                <div class="category-icon">🎭</div>
+                <h2 class="category-title">Media & Creative</h2>
+                <p class="category-desc">Performance, art & custom builds</p>
+                <div class="category-products-preview">
+                    <span>Mercury Theatrical</span>
+                    <span>One-Off Projects</span>
                 </div>
-            </a>
+            </div>
 
-            <!-- One-Off Projects Card -->
-            <a href="one-off-projects/index.html" class="card card-oneoff">
-                <div class="card-content">
-                    <div class="card-icon-svg">
-                        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Outer diamond/gem shape -->
-                            <path d="M30 6 L50 20 L50 40 L30 54 L10 40 L10 20 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <!-- Inner facets -->
-                            <path d="M30 6 L30 54" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-                            <path d="M10 20 L50 40" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-                            <path d="M50 20 L10 40" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-                            <!-- Center spark/star -->
-                            <circle cx="30" cy="30" r="6" fill="currentColor" opacity="0.9"/>
-                            <path d="M30 18 L30 24 M30 36 L30 42 M22 30 L18 30 M38 30 L42 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <!-- Corner accents -->
-                            <circle cx="30" cy="6" r="2" fill="currentColor"/>
-                            <circle cx="30" cy="54" r="2" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <h2 class="card-title oneoff-title">One-Off Projects</h2>
-                    <p class="card-tagline-text">Custom builds and unique solutions</p>
-                    <div class="card-features">
-                        <span>Custom Dev</span>
-                        <span>Unique Builds</span>
-                        <span>Portfolio</span>
+        </div>
+
+        <!-- Expanded Category Overlay -->
+        <div id="categoryOverlay" class="category-overlay">
+            <div class="overlay-content">
+                <button class="close-overlay" onclick="closeCategory()">
+                    <span>←</span> Back to Categories
+                </button>
+                <h2 id="overlayTitle" class="overlay-title"></h2>
+                
+                <!-- Stories & Games Products -->
+                <div id="stories-products" class="products-grid hidden">
+                    <!-- Hi Fu Mi -->
+                    <a href="products/hifumi/index.html" class="product-card product-hifumi">
+                        <div class="product-icon">
+                            <img src="Public/HiFuMe.png" alt="Hi Fu Mi">
+                        </div>
+                        <div class="product-info">
+                            <h3>Hi Fu Mi</h3>
+                            <p>Story & Gaming Universe</p>
+                        </div>
+                    </a>
+                    <!-- Everloop -->
+                    <a href="products/everloop/index.html" class="product-card product-everloop">
+                        <div class="product-icon">
+                            <img src="Public/Everloop Logo.png" alt="Everloop">
+                        </div>
+                        <div class="product-info">
+                            <h3>Everloop</h3>
+                            <p>Your Storyworld OS</p>
+                        </div>
+                    </a>
+                    <!-- TAG -->
+                    <div class="product-card product-tag" onclick="event.preventDefault(); closeCategory(); setTimeout(showAgeVerification, 300);" style="cursor: pointer;">
+                        <div class="product-icon">
+                            <img src="Public/TAG Logo.png" alt="TAG">
+                        </div>
+                        <div class="product-info">
+                            <h3>TAG</h3>
+                            <p>Trusted Adult Games</p>
+                            <span class="age-badge">21+</span>
+                        </div>
                     </div>
                 </div>
-            </a>
+
+                <!-- Productivity & Communication Products -->
+                <div id="productivity-products" class="products-grid hidden">
+                    <!-- EmployeeGM -->
+                    <a href="products/employeegm/index.html" class="product-card product-employeegm">
+                        <div class="product-icon">
+                            <img src="Public/EmployeeGM Logo.png" alt="EmployeeGM">
+                        </div>
+                        <div class="product-info">
+                            <h3>EmployeeGM</h3>
+                            <p>Better performance through empowerment</p>
+                        </div>
+                    </a>
+                    <!-- Kiva -->
+                    <a href="products/kiva/index.html" class="product-card product-kiva">
+                        <div class="product-icon">
+                            <img src="Public/Kiva Emoji.png" alt="Kiva">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kiva</h3>
+                            <p>Connection without the Noise</p>
+                        </div>
+                    </a>
+                    <!-- MAVS -->
+                    <a href="products/mavs/index.html" class="product-card product-mavs">
+                        <div class="product-icon">
+                            <img src="Public/MAVS Logo.png" alt="MAVS">
+                        </div>
+                        <div class="product-info">
+                            <h3>MAVS</h3>
+                            <p>Multi-Agent Voice Switcher</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Media & Creative Products -->
+                <div id="media-products" class="products-grid hidden">
+                    <!-- MTP -->
+                    <a href="products/mtp/index.html" class="product-card product-mtp">
+                        <div class="product-icon">
+                            <img src="Public/MTP Logo.png" alt="Mercury Theatrical">
+                        </div>
+                        <div class="product-info">
+                            <h3>Mercury Theatrical</h3>
+                            <p>Live-born experiences for a multi-media world</p>
+                        </div>
+                    </a>
+                    <!-- One-Off Projects -->
+                    <a href="one-off-projects/index.html" class="product-card product-oneoff">
+                        <div class="product-icon product-icon-svg">
+                            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30 6 L50 20 L50 40 L30 54 L10 40 L10 20 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M30 6 L30 54" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                <path d="M10 20 L50 40" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                <path d="M50 20 L10 40" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                <circle cx="30" cy="30" r="6" fill="currentColor" opacity="0.9"/>
+                                <path d="M30 18 L30 24 M30 36 L30 42 M22 30 L18 30 M38 30 L42 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="30" cy="6" r="2" fill="currentColor"/>
+                                <circle cx="30" cy="54" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <h3>One-Off Projects</h3>
+                            <p>Custom builds and unique solutions</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
@@ -221,6 +225,62 @@
     </div>
 
     <script>
+        // Category Expansion Functions
+        function expandCategory(tile) {
+            const category = tile.dataset.category;
+            const overlay = document.getElementById('categoryOverlay');
+            const title = document.getElementById('overlayTitle');
+            
+            // Get tile position for animation origin
+            const rect = tile.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            // Set transform origin from clicked tile
+            overlay.style.transformOrigin = `${centerX}px ${centerY}px`;
+            
+            // Set title based on category
+            const titles = {
+                'stories': 'Stories & Games',
+                'productivity': 'Productivity & Communication',
+                'media': 'Media & Creative'
+            };
+            title.textContent = titles[category];
+            
+            // Hide all product grids, show the selected one
+            document.querySelectorAll('.products-grid').forEach(grid => {
+                grid.classList.add('hidden');
+            });
+            document.getElementById(category + '-products').classList.remove('hidden');
+            
+            // Animate tile to center then expand overlay
+            tile.classList.add('expanding');
+            
+            setTimeout(() => {
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }, 150);
+            
+            setTimeout(() => {
+                tile.classList.remove('expanding');
+            }, 600);
+        }
+        
+        function closeCategory() {
+            const overlay = document.getElementById('categoryOverlay');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Close overlay with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCategory();
+                document.getElementById('ageModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
         function showAgeVerification() {
             document.getElementById('ageModal').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -228,12 +288,10 @@
 
         function verifyAge(isOfAge) {
             if (isOfAge) {
-                // User verified as 21+
                 document.getElementById('ageModal').classList.remove('active');
                 document.body.style.overflow = '';
                 window.location.href = 'products/tag/index.html';
             } else {
-                // User is under 21
                 document.getElementById('ageModal').classList.remove('active');
                 document.body.style.overflow = '';
                 alert('You must be 21 or older to access this content.');
@@ -245,6 +303,13 @@
             if (e.target === this) {
                 this.classList.remove('active');
                 document.body.style.overflow = '';
+            }
+        });
+        
+        // Close overlay if clicking outside content
+        document.getElementById('categoryOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCategory();
             }
         });
     </script>
