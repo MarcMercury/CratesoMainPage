@@ -145,6 +145,21 @@ body {
     padding-left: 12px;
 }
 
+.project-logo {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: var(--bg-card);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover .project-logo {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(237, 182, 69, 0.2);
+}
+
 .project-bullet {
     width: 8px;
     height: 8px;
