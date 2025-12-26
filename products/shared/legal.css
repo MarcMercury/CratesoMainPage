@@ -17,12 +17,12 @@
     font-family: var(--font-heading, 'Playfair Display', serif);
     font-size: 48px;
     margin-bottom: 12px;
-    color: var(--kiva-primary, var(--everloop-primary, var(--egm-primary, var(--employeegm-primary, var(--tag-primary, var(--hifumi-primary, var(--mavs-primary, #EAA542)))))));
+    color: var(--venn-primary, var(--everloop-primary, var(--egm-primary, var(--employeegm-primary, var(--tag-primary, var(--hifumi-primary, var(--mavs-primary, #EAA542)))))));
 }
 
 .last-updated {
     font-size: 14px;
-    color: var(--kiva-text-muted, var(--egm-text-muted, var(--text-muted, #888)));
+    color: var(--venn-text-muted, var(--egm-text-muted, var(--text-muted, #888)));
     margin-bottom: 48px;
     padding-bottom: 24px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -71,7 +71,7 @@
 }
 
 .legal-content a {
-    color: var(--kiva-primary, var(--everloop-primary, var(--egm-primary, var(--employeegm-primary, var(--tag-primary, var(--hifumi-primary, var(--mavs-primary, #EAA542)))))));
+    color: var(--venn-primary, var(--everloop-primary, var(--egm-primary, var(--employeegm-primary, var(--tag-primary, var(--hifumi-primary, var(--mavs-primary, #EAA542)))))));
     text-decoration: none;
 }
 

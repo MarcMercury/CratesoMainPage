@@ -14,12 +14,12 @@
     --text-light: #E3E3E6;
     --text-gray: #9c9ca4;
     --card-bg: #1A1A1F;
-    --card-kiva-bg: #1d1817;
+    --card-venn-bg: #1d1817;
     --medallion-inner: #192029;
     --icon-bg: #202028;
     
     /* Product accent colors */
-    --kiva-accent: #D4A84B;
+    --venn-accent: #D4A84B;
     --everloop-accent: #7B68EE;
     --employeegm-accent: #EAA542;
     --tag-accent: #FF6B6B;
@@ -483,7 +483,7 @@ body {
 .product-everloop:hover { border-color: var(--everloop-accent); box-shadow: 0 16px 48px rgba(123, 104, 238, 0.15); }
 .product-tag:hover { border-color: var(--tag-accent); box-shadow: 0 16px 48px rgba(255, 107, 107, 0.15); }
 .product-employeegm:hover { border-color: var(--employeegm-accent); box-shadow: 0 16px 48px rgba(234, 165, 66, 0.15); }
-.product-kiva:hover { border-color: var(--kiva-accent); box-shadow: 0 16px 48px rgba(212, 168, 75, 0.15); }
+.product-venn:hover { border-color: var(--venn-accent); box-shadow: 0 16px 48px rgba(212, 168, 75, 0.15); }
 .product-mavs:hover { border-color: var(--mavs-accent); box-shadow: 0 16px 48px rgba(0, 212, 255, 0.15); }
 .product-mtp:hover { border-color: var(--mtp-accent); box-shadow: 0 16px 48px rgba(201, 168, 108, 0.15); }
 .product-oneoff:hover { border-color: var(--oneoff-accent); box-shadow: 0 16px 48px rgba(156, 163, 175, 0.15); }
@@ -582,19 +582,19 @@ body {
 
 /* Individual Card Styles */
 
-/* Kiva Card */
-.card-kiva {
+/* Venn Card */
+.card-venn {
     background: linear-gradient(145deg, #2a2218 0%, #1d1817 100%);
     border-color: rgba(212, 168, 75, 0.3);
 }
 
-.card-kiva:hover {
-    border-color: var(--kiva-accent);
+.card-venn:hover {
+    border-color: var(--venn-accent);
     box-shadow: 0 0 30px rgba(212, 168, 75, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.kiva-title {
-    color: var(--kiva-accent);
+.venn-title {
+    color: var(--venn-accent);
 }
 
 /* Everloop Card */
