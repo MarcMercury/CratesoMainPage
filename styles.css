@@ -27,6 +27,7 @@
     --mavs-accent: #00D4FF;
     --mtp-accent: #C9A86C;
     --oneoff-accent: #9CA3AF;
+    --cho-accent: #4F9DA6;
 }
 
 html {
@@ -487,6 +488,7 @@ body {
 .product-mavs:hover { border-color: var(--mavs-accent); box-shadow: 0 16px 48px rgba(0, 212, 255, 0.15); }
 .product-mtp:hover { border-color: var(--mtp-accent); box-shadow: 0 16px 48px rgba(201, 168, 108, 0.15); }
 .product-oneoff:hover { border-color: var(--oneoff-accent); box-shadow: 0 16px 48px rgba(156, 163, 175, 0.15); }
+.product-cho:hover { border-color: var(--cho-accent); box-shadow: 0 16px 48px rgba(79, 157, 166, 0.15); }
 
 /* Cards Container - Grid Layout (legacy, keeping for reference) */
 .cards-container {
