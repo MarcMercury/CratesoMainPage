@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - SLAPP | Crateso</title>
+    <meta name="description" content="SLAPP Privacy Policy - How we protect your data and maintain your privacy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../shared/legal.css">
+    <style>
+        :root {
+            --slapp-primary: #FF6B35;
+            --slapp-secondary: #F7C94B;
+        }
+        .legal-content h1 {
+            background: linear-gradient(135deg, var(--slapp-primary), var(--slapp-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .legal-content a {
+            color: var(--slapp-primary);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-icon">←</span>
+            <span>Back to SLAPP</span>
+        </a>
+        <div class="nav-links">
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+        </div>
+    </nav>
+
+    <main class="legal-page">
+        <div class="legal-content">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: January 4, 2026</p>
+
+            <section>
+                <p>Welcome to SLAPP ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how our mobile application and website (collectively, the "Service") collect, use, and disclose information about you.</p>
+                <p>By using SLAPP, you consent to the data practices described in this policy.</p>
+            </section>
+
+            <section>
+                <h2>1. Information We Collect</h2>
+                <p>We collect only the information necessary to provide our real-time collaboration features.</p>
+                
+                <h3>A. Information You Provide</h3>
+                <ul>
+                    <li><strong>Phone Number:</strong> We use your phone number for authentication (via SMS OTP) to create your unique account. We do not use passwords.</li>
+                    <li><strong>User Content ("Slaps"):</strong> Any text, sticky notes, or media you post to a Board is stored in our database to display it to you and your group members.</li>
+                    <li><strong>Profile Data:</strong> If you choose to provide it, we collect your display name and avatar image.</li>
+                </ul>
+
+                <h3>B. Information Collected Automatically</h3>
+                <ul>
+                    <li><strong>Device Information:</strong> We may collect information about the device you use to access SLAPP, including the hardware model, operating system and version, and unique device identifiers.</li>
+                    <li><strong>Usage Data:</strong> We track interactions with the Service, such as when you create a board or merge notes, to improve app performance.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. How We Use Your Information</h2>
+                <ul>
+                    <li><strong>To Provide the Service:</strong> We use your data to sync sticky notes in real-time between you and your group members.</li>
+                    <li><strong>AI Processing:</strong> When you use the "Merge" feature, the text of the selected notes is sent to our AI provider (via secure Edge Functions) to generate a summary. This data is processed temporarily and is not used to train third-party AI models.</li>
+                    <li><strong>Communication:</strong> We use your phone number to send you authentication codes.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. How We Share Information</h2>
+                <ul>
+                    <li><strong>With Your Group:</strong> Any content you post on a Board is visible to other members of that specific Board.</li>
+                    <li><strong>Service Providers:</strong> We share data with trusted third-party vendors who help us operate our Service:
+                        <ul>
+                            <li><strong>Supabase:</strong> For database hosting, authentication, and real-time infrastructure.</li>
+                            <li><strong>OpenAI / Google Gemini:</strong> For processing text during the "Merge" feature.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in the good-faith belief that such action is necessary to comply with legal processes.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Data Security</h2>
+                <p>We use Supabase for our backend infrastructure, which employs enterprise-grade security standards.</p>
+                <ul>
+                    <li><strong>Encryption:</strong> All data is encrypted in transit (SSL/TLS) and at rest.</li>
+                    <li><strong>Access Control:</strong> We use Row Level Security (RLS) to ensure that only members of a specific Board can read or write data to that Board.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Data Deletion</h2>
+                <p>You have the right to delete your account and data at any time.</p>
+                <ul>
+                    <li><strong>In-App:</strong> Go to Settings → Account → Delete Account.</li>
+                    <li><strong>By Request:</strong> Email us at <a href="mailto:privacy@slapp.fun">privacy@slapp.fun</a>.</li>
+                </ul>
+                <p>Upon deletion, your profile information is removed from our live database immediately. Content you posted to shared boards may remain visible to other group members unless you manually delete those notes before closing your account.</p>
+            </section>
+
+            <section>
+                <h2>6. Children's Privacy</h2>
+                <p>SLAPP is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+            </section>
+
+            <section>
+                <h2>7. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+            </section>
+
+            <section>
+                <h2>8. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                <ul>
+                    <li>Email: <a href="mailto:info@crateso.com">info@crateso.com</a></li>
+                    <li>Website: <a href="https://www.slapp.fun">www.slapp.fun</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">SLAPP Home</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="support.html">Support</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Crateso. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
