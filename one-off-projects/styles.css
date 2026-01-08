@@ -326,3 +326,163 @@ a.project-name:hover {
         justify-content: center;
     }
 }
+
+/* TAG Project Item & Age Badge */
+.project-tag {
+    transition: all 0.3s ease;
+}
+
+.project-tag:hover .project-logo {
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+}
+
+.age-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF6B6B, #ee5a5a);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-left: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Age Verification Modal */
+.age-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.age-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.age-modal-content {
+    background: linear-gradient(145deg, #1f1a1a 0%, #2a1f1f 100%);
+    border: 2px solid #FF6B6B;
+    border-radius: 20px;
+    padding: 48px;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(255, 107, 107, 0.3);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.age-modal-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.age-modal-content h2 {
+    font-size: 28px;
+    color: #FF6B6B;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.age-modal-content > p {
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.age-modal-question {
+    font-size: 20px !important;
+    font-weight: 600;
+    color: var(--text-white) !important;
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+.age-modal-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.age-btn {
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: inherit;
+}
+
+.age-btn-yes {
+    background: linear-gradient(135deg, #FF6B6B, #ee5a5a);
+    color: white;
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.age-btn-yes:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.5);
+}
+
+.age-btn-no {
+    background: transparent;
+    color: var(--text-gray);
+    border: 2px solid var(--text-gray);
+}
+
+.age-btn-no:hover {
+    border-color: var(--text-light);
+    color: var(--text-light);
+}
+
+.age-modal-disclaimer {
+    font-size: 12px !important;
+    color: var(--text-gray) !important;
+    line-height: 1.5;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+    .age-modal-content {
+        padding: 32px 24px;
+    }
+    
+    .age-modal-content h2 {
+        font-size: 22px;
+    }
+    
+    .age-modal-buttons {
+        flex-direction: column;
+    }
+    
+    .age-btn {
+        width: 100%;
+    }
+}

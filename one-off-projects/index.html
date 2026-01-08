@@ -49,6 +49,16 @@
             <h2 class="section-title">Completed Projects</h2>
             
             <ul class="projects-list">
+                <li class="project-item project-tag" onclick="showAgeVerification()" style="cursor: pointer;">
+                    <img src="../Public/TAG Logo.png" alt="TAG" class="project-logo">
+                    <div class="project-content">
+                        <span class="project-name">TAG</span>
+                        <span class="project-separator">—</span>
+                        <span class="project-description">Trusted Adult Games</span>
+                        <span class="age-badge">21+</span>
+                    </div>
+                </li>
+
                 <li class="project-item">
                     <img src="../Public/stoop politics.png" alt="Stoop Politics" class="project-logo">
                     <div class="project-content">
@@ -90,5 +100,55 @@
             <span class="footer-copyright">© 2025 Crateso. All rights reserved.</span>
         </div>
     </footer>
+
+    <!-- Age Verification Modal for TAG -->
+    <div id="ageModal" class="age-modal">
+        <div class="age-modal-content">
+            <div class="age-modal-icon">🔞</div>
+            <h2>Age Verification Required</h2>
+            <p>You must be 21 years or older to access Trusted Adult Games (TAG).</p>
+            <p class="age-modal-question">Are you 21 or older?</p>
+            <div class="age-modal-buttons">
+                <button class="age-btn age-btn-yes" onclick="verifyAge(true)">Yes, I'm 21+</button>
+                <button class="age-btn age-btn-no" onclick="verifyAge(false)">No, I'm under 21</button>
+            </div>
+            <p class="age-modal-disclaimer">By clicking "Yes", you confirm that you are of legal age to view adult content in your jurisdiction.</p>
+        </div>
+    </div>
+
+    <script>
+        function showAgeVerification() {
+            document.getElementById('ageModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function verifyAge(isOfAge) {
+            if (isOfAge) {
+                document.getElementById('ageModal').classList.remove('active');
+                document.body.style.overflow = '';
+                window.location.href = '../products/tag/index.html';
+            } else {
+                document.getElementById('ageModal').classList.remove('active');
+                document.body.style.overflow = '';
+                alert('You must be 21 or older to access this content.');
+            }
+        }
+
+        // Close modal if clicking outside
+        document.getElementById('ageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('ageModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 </body>
 </html>
