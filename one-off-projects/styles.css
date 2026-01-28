@@ -327,19 +327,28 @@ a.project-name:hover {
     }
 }
 
-/* TAG Project Item & Age Badge */
-.project-tag {
+/* Vespara Project Item & Age Badge */
+.project-vespara {
     transition: all 0.3s ease;
 }
 
-.project-tag:hover .project-logo {
-    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+.project-vespara:hover .project-logo {
+    box-shadow: 0 4px 20px rgba(157, 133, 177, 0.4);
+}
+
+.vespara-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    background: linear-gradient(135deg, #1A1523, #2D2638);
+    border: 1px solid rgba(191, 166, 216, 0.3);
 }
 
 .age-badge {
     display: inline-block;
-    background: linear-gradient(135deg, #FF6B6B, #ee5a5a);
-    color: white;
+    background: linear-gradient(135deg, #9D85B1, #BFA6D8);
+    color: #1A1523;
     font-size: 11px;
     font-weight: 700;
     padding: 4px 10px;
@@ -372,14 +381,14 @@ a.project-name:hover {
 }
 
 .age-modal-content {
-    background: linear-gradient(145deg, #1f1a1a 0%, #2a1f1f 100%);
-    border: 2px solid #FF6B6B;
+    background: linear-gradient(145deg, #1A1523 0%, #2D2638 100%);
+    border: 2px solid #9D85B1;
     border-radius: 20px;
     padding: 48px;
     max-width: 480px;
     width: 90%;
     text-align: center;
-    box-shadow: 0 20px 60px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 20px 60px rgba(157, 133, 177, 0.3);
     animation: modalSlideIn 0.3s ease;
 }
 
@@ -401,7 +410,7 @@ a.project-name:hover {
 
 .age-modal-content h2 {
     font-size: 28px;
-    color: #FF6B6B;
+    color: #BFA6D8;
     margin-bottom: 16px;
     font-weight: 700;
 }
@@ -440,14 +449,14 @@ a.project-name:hover {
 }
 
 .age-btn-yes {
-    background: linear-gradient(135deg, #FF6B6B, #ee5a5a);
-    color: white;
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(135deg, #9D85B1, #BFA6D8);
+    color: #1A1523;
+    box-shadow: 0 6px 20px rgba(157, 133, 177, 0.4);
 }
 
 .age-btn-yes:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.5);
+    box-shadow: 0 10px 30px rgba(157, 133, 177, 0.5);
 }
 
 .age-btn-no {

@@ -49,12 +49,12 @@
             <h2 class="section-title">Completed Projects</h2>
             
             <ul class="projects-list">
-                <li class="project-item project-tag" onclick="showAgeVerification()" style="cursor: pointer;">
-                    <img src="../Public/TAG Logo.png" alt="TAG" class="project-logo">
+                <li class="project-item project-vespara" onclick="showAgeVerification()" style="cursor: pointer;">
+                    <div class="project-logo vespara-logo">🌙</div>
                     <div class="project-content">
-                        <span class="project-name">TAG</span>
+                        <span class="project-name">Vespara</span>
                         <span class="project-separator">—</span>
-                        <span class="project-description">Trusted Adult Games</span>
+                        <span class="project-description">The Social Operating System — A Relationship Management System with integrated TAGS (Trusted Adult Games)</span>
                         <span class="age-badge">21+</span>
                     </div>
                 </li>
@@ -101,12 +101,12 @@
         </div>
     </footer>
 
-    <!-- Age Verification Modal for TAG -->
+    <!-- Age Verification Modal for Vespara -->
     <div id="ageModal" class="age-modal">
         <div class="age-modal-content">
-            <div class="age-modal-icon">🔞</div>
+            <div class="age-modal-icon">🌙</div>
             <h2>Age Verification Required</h2>
-            <p>You must be 21 years or older to access Trusted Adult Games (TAG).</p>
+            <p>You must be 21 years or older to access Vespara — The Social Operating System.</p>
             <p class="age-modal-question">Are you 21 or older?</p>
             <div class="age-modal-buttons">
                 <button class="age-btn age-btn-yes" onclick="verifyAge(true)">Yes, I'm 21+</button>
@@ -126,7 +126,7 @@
             if (isOfAge) {
                 document.getElementById('ageModal').classList.remove('active');
                 document.body.style.overflow = '';
-                window.location.href = '../products/tag/index.html';
+                window.location.href = '../products/vespara/index.html';
             } else {
                 document.getElementById('ageModal').classList.remove('active');
                 document.body.style.overflow = '';
