@@ -68,13 +68,14 @@ body {
     z-index: 1;
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding: 10px 28px;
+    gap: 18px;
+    padding: 6px 22px;
     background: rgba(237, 182, 69, 0.05);
     border: 1px solid rgba(237, 182, 69, 0.15);
     border-radius: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     backdrop-filter: blur(8px);
+    flex-shrink: 0;
 }
 
 .stat-item {
@@ -128,11 +129,14 @@ body {
 .landing-page {
     width: 100%;
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px 40px;
+    justify-content: center;
+    padding: 12px 20px;
     position: relative;
+    overflow: hidden;
 }
 
 /* Vignette Effect */
@@ -152,15 +156,15 @@ body {
 .medallion-container {
     position: relative;
     z-index: 1;
-    margin-top: 3vh;
-    margin-bottom: 16px;
+    margin-top: 0;
+    margin-bottom: 8px;
     flex-shrink: 0;
 }
 
 .medallion {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,8 +172,8 @@ body {
 
 .medallion-glow {
     position: absolute;
-    width: 240px;
-    height: 240px;
+    width: 160px;
+    height: 160px;
     background: radial-gradient(circle, rgba(237, 182, 69, 0.25) 0%, rgba(234, 165, 66, 0.1) 40%, transparent 70%);
     border-radius: 50%;
     top: 50%;
@@ -185,8 +189,8 @@ body {
 
 .medallion-rings {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
     animation: rotateRing 60s linear infinite;
 }
 
@@ -215,16 +219,16 @@ body {
     align-items: center;
     justify-content: center;
     gap: 4px;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
     background: radial-gradient(circle, #252d38 0%, #192029 100%);
 }
 
 .logo-image {
-    width: 130px;
-    height: 130px;
+    width: 86px;
+    height: 86px;
     object-fit: cover;
     border-radius: 50%;
     filter: drop-shadow(0 0 10px rgba(237, 182, 69, 0.5));
@@ -249,29 +253,29 @@ body {
     position: relative;
     z-index: 1;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     flex-shrink: 0;
 }
 
 .brand-title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
-    letter-spacing: 12px;
+    letter-spacing: 10px;
     color: var(--text-white);
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     text-transform: uppercase;
 }
 
 .brand-tagline {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--gold-secondary);
     font-style: italic;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .divider {
-    width: 120px;
+    width: 100px;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--gold-secondary), transparent);
     margin: 0 auto;
@@ -282,12 +286,12 @@ body {
 .select-label {
     position: relative;
     z-index: 1;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     letter-spacing: 3px;
     color: var(--text-gray);
     opacity: 0.8;
-    margin: 16px 0 24px;
+    margin: 8px 0 12px;
     text-transform: uppercase;
     flex-shrink: 0;
 }
@@ -297,19 +301,20 @@ body {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 280px));
-    gap: 20px;
+    grid-template-columns: repeat(4, minmax(0, 190px));
+    gap: 14px;
     padding: 0 20px;
-    max-width: 620px;
+    max-width: 880px;
     width: 100%;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 /* Category Tile */
 .category-tile {
     background: var(--card-bg);
-    border-radius: 24px;
-    padding: 32px 24px;
+    border-radius: 18px;
+    padding: 18px 14px;
     text-align: center;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -344,9 +349,9 @@ body {
 }
 
 .category-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 24px;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,50 +368,50 @@ body {
 }
 
 .category-title {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--text-white);
-    margin-bottom: 12px;
-    letter-spacing: 1px;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
 }
 
 .category-desc {
-    font-size: 14px;
+    font-size: 11px;
     color: var(--text-gray);
-    margin-bottom: 24px;
-    line-height: 1.5;
+    margin-bottom: 10px;
+    line-height: 1.4;
 }
 
 .category-products-preview {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 5px;
     justify-content: center;
 }
 
 .category-products-preview span {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px 6px 8px;
+    gap: 4px;
+    padding: 3px 8px 3px 5px;
     background: rgba(237, 182, 69, 0.1);
-    border-radius: 20px;
-    font-size: 11px;
+    border-radius: 16px;
+    font-size: 9px;
     color: var(--gold-primary);
     font-weight: 500;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
 .category-products-preview span img {
-    width: 18px;
-    height: 18px;
-    border-radius: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
     object-fit: cover;
 }
 
 .category-products-preview span.has-svg-icon svg {
-    width: 16px;
-    height: 16px;
+    width: 11px;
+    height: 11px;
     color: var(--oneoff-accent);
 }
 
@@ -835,60 +840,78 @@ body {
 
 /* Footer */
 .main-footer {
-    position: relative;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
     z-index: 1;
-    margin-top: 40px;
-    padding: 20px;
+    padding: 6px 20px;
     text-align: center;
     color: var(--text-gray);
-    font-size: 12px;
+    font-size: 11px;
     opacity: 0.6;
 }
 
 /* Responsive Design */
-@media (max-width: 680px) {
+@media (max-width: 900px) and (min-width: 681px) {
     .categories-container {
-        grid-template-columns: 1fr;
-        max-width: 340px;
-        gap: 16px;
-        padding: 0 16px;
+        grid-template-columns: repeat(2, minmax(0, 220px));
+        max-width: 480px;
+    }
+}
+
+@media (max-width: 680px) {
+    .landing-page {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    .categories-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 360px;
+        gap: 10px;
+        padding: 0 12px;
     }
 
     .stats-bar {
-        gap: 16px;
-        padding: 8px 18px;
+        gap: 12px;
+        padding: 6px 14px;
     }
 
-    .stat-number { font-size: 15px; }
-    .stat-label { font-size: 10px; }
+    .stat-number { font-size: 14px; }
+    .stat-label { font-size: 9px; }
     
     .brand-title {
-        font-size: 28px;
+        font-size: 24px;
         letter-spacing: 8px;
     }
     
     .brand-tagline {
-        font-size: 16px;
+        font-size: 13px;
     }
-    
-    .medallion {
-        width: 160px;
-        height: 160px;
+
+    .main-footer {
+        position: relative;
+        margin-top: 20px;
     }
-    
-    .medallion-rings {
-        width: 160px;
-        height: 160px;
+}
+
+/* Allow scroll on short viewports so nothing gets cut off */
+@media (max-height: 720px) and (min-width: 681px) {
+    .landing-page {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+        justify-content: flex-start;
+        padding-top: 16px;
     }
-    
-    .medallion-glow {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .logo-mark {
-        width: 50px;
-        height: 50px;
+    .main-footer {
+        position: relative;
+        margin-top: 16px;
+        bottom: auto;
     }
 }
 
@@ -1032,17 +1055,6 @@ body {
 
 /* Category Responsive Styles */
 @media (max-width: 900px) {
-    .categories-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 20px;
-    }
-    
-    .category-tile {
-        max-width: 400px;
-        width: 100%;
-    }
-    
     .overlay-content {
         padding: 24px;
     }
@@ -1055,15 +1067,16 @@ body {
 
 @media (max-width: 600px) {
     .category-tile {
-        padding: 28px 20px;
+        padding: 14px 10px;
     }
     
     .category-icon {
-        font-size: 44px;
+        width: 44px;
+        height: 44px;
     }
     
     .category-title {
-        font-size: 18px;
+        font-size: 13px;
     }
     
     .products-grid {
