@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
     <canvas id="particles-canvas"></canvas>
@@ -49,7 +49,7 @@
         <!-- Live Stats Bar -->
         <div class="stats-bar">
             <div class="stat-item">
-                <span class="stat-number" id="stat-products">12</span>
+                <span class="stat-number" id="stat-products">11</span>
                 <span class="stat-label">Products</span>
             </div>
             <div class="stat-divider"></div>
@@ -143,7 +143,6 @@
                 <div class="category-products-preview">
                     <span><img src="Public/EmployeeGM Logo.png" alt="">EmployeeGM</span>
                     <span><img src="Public/MAVS Logo.png" alt="">MAVS</span>
-                    <span><img src="Public/Slapp ICon.png" alt="">SLAPP</span>
                     <span><img src="Public/CLO ICON.png" alt="">CLO</span>
                 </div>
             </div>
@@ -178,10 +177,9 @@
                 <h2 class="category-title">Community & Lifestyle</h2>
                 <p class="category-desc">Culture, sports & city living</p>
                 <div class="category-products-preview">
+                    <span>� Vespara</span>
                     <span>🎾 HottiesThatHit</span>
                     <span>🗽 NYCDeli</span>
-                    <span>🐾 PetPodcast</span>
-                    <span><img src="Public/stoop politics.png" alt="" style="border-radius:50%">Stoop Politics</span>
                 </div>
             </div>
 
@@ -221,6 +219,8 @@
                 <p class="category-desc">Performance, art & custom builds</p>
                 <div class="category-products-preview">
                     <span><img src="Public/MTP Logo.png" alt="">Mercury Theatrical</span>
+                    <span><img src="Public/stoop politics.png" alt="" style="border-radius:50%">Stoop Politics</span>
+                    <span>🐾 PetPodcast</span>
                     <span>📦 Trauma Box</span>
                     <span class="has-svg-icon"><svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 6 L50 20 L50 40 L30 54 L10 40 L10 20 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="30" cy="30" r="5" fill="currentColor"/></svg>One-Off Projects</span>
                 </div>
@@ -305,16 +305,6 @@
                             <p>Chief Life Officer — Your Life, Harmonized</p>
                         </div>
                     </a>
-                    <!-- SLAPP -->
-                    <a href="products/slapp/index.html" class="product-card product-slapp">
-                        <div class="product-icon">
-                            <img src="Public/Slapp ICon.png" alt="SLAPP">
-                        </div>
-                        <div class="product-info">
-                            <h3>SLAPP</h3>
-                            <p>Story Layering And Production Platform</p>
-                        </div>
-                    </a>
                 </div>
 
                 <!-- Community & Lifestyle Products -->
@@ -377,6 +367,21 @@
                         </div>
                         <span class="product-live-badge" data-repo="NYCDeli"></span>
                     </a>
+                </div>
+
+                <!-- Media & Creative Products -->
+                <div id="media-products" class="products-grid hidden">
+                    <!-- Stoop Politics -->
+                    <a href="products/stooppolitics/index.html" class="product-card product-stooppolitics">
+                        <div class="product-icon">
+                            <img src="Public/stoop politics.png" alt="Stoop Politics" style="border-radius:50%; object-fit:cover">
+                        </div>
+                        <div class="product-info">
+                            <h3>Stoop Politics</h3>
+                            <p>Where Neighborhoods Meet Democracy</p>
+                        </div>
+                        <span class="product-live-badge" data-repo="Stoop-Politics"></span>
+                    </a>
                     <!-- PetPodcast -->
                     <a href="products/petpodcast/index.html" class="product-card product-petpodcast">
                         <div class="product-icon product-icon-svg" style="color:#F39C12">
@@ -397,21 +402,6 @@
                         </div>
                         <span class="product-live-badge" data-repo="PetPodcast"></span>
                     </a>
-                    <!-- Stoop-Politics -->
-                    <a href="products/stooppolitics/index.html" class="product-card product-stooppolitics">
-                        <div class="product-icon">
-                            <img src="Public/stoop politics.png" alt="Stoop Politics" style="border-radius:50%; object-fit:cover">
-                        </div>
-                        <div class="product-info">
-                            <h3>Stoop Politics</h3>
-                            <p>Where Neighborhoods Meet Democracy</p>
-                        </div>
-                        <span class="product-live-badge" data-repo="Stoop-Politics"></span>
-                    </a>
-                </div>
-
-                <!-- Media & Creative Products -->
-                <div id="media-products" class="products-grid hidden">
                     <!-- MTP -->
                     <a href="products/mtp/index.html" class="product-card product-mtp">
                         <div class="product-icon">
