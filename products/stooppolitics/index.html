@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoop Politics - Where Neighborhoods Meet Democracy | Crateso</title>
+    <meta name="description" content="Local issues. Real voices. Stoop Politics connects communities to the decisions that shape their block, their borough, and their city.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <span>←</span>
+            <span>Back to Crateso</span>
+        </a>
+        <div class="nav-links">
+            <a href="#platform">The Platform</a>
+            <a href="#features">Features</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="#join" class="nav-cta">Join Your Block</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🏙️ LOCAL · CIVIC · COMMUNITY</div>
+            <div class="hero-icon-wrap">
+                <img src="../../Public/stoop politics.png" alt="Stoop Politics" class="hero-logo">
+            </div>
+            <h1 class="hero-title">Stoop Politics</h1>
+            <p class="hero-tagline">Democracy starts on your block.</p>
+            <p class="hero-description">
+                From zoning debates to school board decisions, from the new restaurant application 
+                down the street to the park renovation vote — Stoop Politics keeps you informed, 
+                connected, and heard.
+            </p>
+            <div class="hero-buttons">
+                <a href="#join" class="btn btn-primary">Find Your Community</a>
+                <a href="#platform" class="btn btn-secondary">See How It Works</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="issue-ticker">
+        <div class="ticker-label">TRENDING NEAR YOU</div>
+        <div class="ticker-items">
+            <div class="ticker-item"><span class="tag tag-hot">🔥 Hot</span>New Bike Lane Proposal — Block 42W</div>
+            <div class="ticker-item"><span class="tag tag-vote">🗳️ Vote</span>Community Garden Expansion — 3rd Ave</div>
+            <div class="ticker-item"><span class="tag tag-new">🆕 New</span>Zoning Meeting — Tuesday 7pm</div>
+            <div class="ticker-item"><span class="tag tag-hot">🔥 Hot</span>Building 17B Noise Complaint Thread</div>
+        </div>
+    </section>
+
+    <section id="platform" class="platform-section">
+        <div class="container">
+            <h2 class="section-title">Built for the Block</h2>
+            <p class="section-subtitle">Civic engagement, without the jargon</p>
+            <div class="platform-grid">
+                <div class="platform-card card-big">
+                    <div class="platform-icon">📋</div>
+                    <h3>Local Issue Tracking</h3>
+                    <p>Follow active issues in your neighborhood — from permit applications to public hearings. Get alerts when something you care about moves forward.</p>
+                    <div class="platform-tag">Real-time updates</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🗳️</div>
+                    <h3>Community Polls</h3>
+                    <p>Voice your opinion on local decisions before they're finalized. Non-binding but visible to community leaders and local officials.</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">💬</div>
+                    <h3>Block-Level Discussions</h3>
+                    <p>Talk to the people on your actual block. Verified local accounts, civil discourse tools, and community moderators keep it real.</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🏛️</div>
+                    <h3>Meeting Alerts</h3>
+                    <p>Never miss a community board meeting, school board vote, or city council session that affects your neighborhood.</p>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">📍</div>
+                    <h3>Hyperlocal Map</h3>
+                    <p>See issues, events, and discussions pinned to the actual locations they affect. Your city, your streets, in real time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="features-statement">
+                <h2>Politics doesn't have to be toxic to be real.</h2>
+                <p>
+                    Stoop Politics is built around the idea that most political change happens locally, 
+                    most people care about their immediate community, and most of what divides us nationally 
+                    doesn't actually apply to whether we should repave the street or add more benches to the park.
+                </p>
+                <p>
+                    We built tools for that conversation — not the screaming match.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Claim Your Block</h2>
+                <p>Enter your zip code and we'll show you what's already being discussed in your neighborhood. Or start the conversation yourself.</p>
+                <form class="waitlist-form" onsubmit="handleJoin(event)">
+                    <input type="text" placeholder="Enter your ZIP code" class="waitlist-input" pattern="[0-9]{5}" maxlength="5" required>
+                    <button type="submit" class="btn btn-primary">Find My Block</button>
+                </form>
+                <p class="cta-disclaimer">Your location data stays local. We don't sell it. Period.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="support.html">Support</a>
+                <a href="data-deletion.html">Data Deletion</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Crateso · Stoop Politics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleJoin(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.textContent = '✓ We\'ll notify you!';
+            btn.style.background = '#3498DB';
+            btn.disabled = true;
+        }
+    </script>
+</body>
+</html>

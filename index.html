@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
+    <canvas id="particles-canvas"></canvas>
     <main class="landing-page">
         <!-- Top Logo Medallion -->
         <div class="medallion-container">
@@ -43,6 +44,24 @@
             <h1 class="brand-title">CRATESO</h1>
             <p class="brand-tagline">Make Them Think</p>
             <div class="divider"></div>
+        </div>
+
+        <!-- Live Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number" id="stat-products">12</span>
+                <span class="stat-label">Products</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" id="stat-repos">10</span>
+                <span class="stat-label">Live Repos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-dot active"></span>
+                <span class="stat-label">Building</span>
+            </div>
         </div>
 
         <!-- Select a Product Label -->
@@ -129,6 +148,43 @@
                 </div>
             </div>
 
+            <!-- Community & Lifestyle Category -->
+            <div class="category-tile" data-category="community" onclick="expandCategory(this)">
+                <div class="category-icon">
+                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="commGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FF6B9D"/>
+                                <stop offset="50%" stop-color="#FFA500"/>
+                                <stop offset="100%" stop-color="#4ECDC4"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- City skyline abstracted -->
+                        <rect x="10" y="42" width="8" height="18" rx="1" fill="none" stroke="url(#commGrad)" stroke-width="2"/>
+                        <rect x="22" y="32" width="10" height="28" rx="1" fill="none" stroke="url(#commGrad)" stroke-width="2"/>
+                        <rect x="36" y="24" width="8" height="36" rx="1" fill="none" stroke="url(#commGrad)" stroke-width="2"/>
+                        <rect x="48" y="36" width="10" height="24" rx="1" fill="none" stroke="url(#commGrad)" stroke-width="2"/>
+                        <rect x="62" y="44" width="8" height="16" rx="1" fill="none" stroke="url(#commGrad)" stroke-width="2"/>
+                        <!-- Ground line -->
+                        <line x1="8" y1="60" x2="72" y2="60" stroke="url(#commGrad)" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Connection arcs above skyline -->
+                        <path d="M14 42 Q40 15 66 44" fill="none" stroke="url(#commGrad)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+                        <!-- People dots -->
+                        <circle cx="14" cy="38" r="3" fill="#FF6B9D"/>
+                        <circle cx="40" cy="20" r="3" fill="#FFA500"/>
+                        <circle cx="66" cy="40" r="3" fill="#4ECDC4"/>
+                    </svg>
+                </div>
+                <h2 class="category-title">Community & Lifestyle</h2>
+                <p class="category-desc">Culture, sports & city living</p>
+                <div class="category-products-preview">
+                    <span>🎾 HottiesThatHit</span>
+                    <span>🗽 NYCDeli</span>
+                    <span>🐾 PetPodcast</span>
+                    <span><img src="Public/stoop politics.png" alt="" style="border-radius:50%">Stoop Politics</span>
+                </div>
+            </div>
+
             <!-- Media & Creative Category -->
             <div class="category-tile" data-category="media" onclick="expandCategory(this)">
                 <div class="category-icon">
@@ -191,6 +247,7 @@
                             <h3>Hi Fu Mi</h3>
                             <p>Story & Gaming Universe</p>
                         </div>
+                        <span class="product-live-badge" data-repo="HiFuMe"></span>
                     </a>
                     <!-- Everloop -->
                     <a href="products/everloop/index.html" class="product-card product-everloop">
@@ -199,8 +256,20 @@
                         </div>
                         <div class="product-info">
                             <h3>Everloop</h3>
-                            <p>Your Storyworld OS</p>
+                            <p>Shared Story Engine</p>
                         </div>
+                        <span class="product-live-badge" data-repo="Everloop.live"></span>
+                    </a>
+                    <!-- TAG (Age Gated) -->
+                    <a href="#" class="product-card product-tag" onclick="showAgeVerification(); return false;">
+                        <div class="product-icon">
+                            <img src="Public/TAG Logo.png" alt="TAG">
+                        </div>
+                        <div class="product-info">
+                            <h3>TAG</h3>
+                            <p>Trusted Adult Games</p>
+                        </div>
+                        <span class="age-badge">21+</span>
                     </a>
                 </div>
 
@@ -245,6 +314,99 @@
                             <h3>SLAPP</h3>
                             <p>Story Layering And Production Platform</p>
                         </div>
+                    </a>
+                </div>
+
+                <!-- Community & Lifestyle Products -->
+                <div id="community-products" class="products-grid hidden">
+                    <!-- Vespara -->
+                    <a href="products/vespara/index.html" class="product-card product-vespara">
+                        <div class="product-icon product-icon-svg" style="color:#9B59B6">
+                            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="26" fill="none" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+                                <path d="M30 8 L30 52 M8 30 L52 30" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                                <circle cx="30" cy="30" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="30" cy="30" r="6" fill="currentColor"/>
+                                <circle cx="30" cy="14" r="3" fill="currentColor" opacity="0.8"/>
+                                <circle cx="46" cy="30" r="3" fill="currentColor" opacity="0.8"/>
+                                <circle cx="30" cy="46" r="3" fill="currentColor" opacity="0.8"/>
+                                <circle cx="14" cy="30" r="3" fill="currentColor" opacity="0.8"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <h3>Vespara</h3>
+                            <p>The Social Operating System</p>
+                        </div>
+                        <span class="product-live-badge" data-repo="Vespara"></span>
+                    </a>
+                    <!-- HottiesThatHit -->
+                    <a href="products/hottiesthathit/index.html" class="product-card product-hottiesthathit">
+                        <div class="product-icon product-icon-svg" style="color:#2ECC71">
+                            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Tennis ball -->
+                                <circle cx="30" cy="30" r="22" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                <!-- Tennis seam curves -->
+                                <path d="M16 14 Q30 22 16 46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M44 14 Q30 22 44 46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <!-- Racket handle -->
+                                <line x1="44" y1="44" x2="54" y2="54" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <h3>HottiesThatHit</h3>
+                            <p>Tennis Reservation & Booking</p>
+                        </div>
+                        <span class="product-live-badge" data-repo="HottiesThatHit"></span>
+                    </a>
+                    <!-- NYCDeli -->
+                    <a href="products/nycdeli/index.html" class="product-card product-nycdeli">
+                        <div class="product-icon product-icon-svg" style="color:#E74C3C">
+                            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Deli sandwich icon -->
+                                <rect x="8" y="34" width="44" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect x="12" y="26" width="36" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect x="8" y="18" width="44" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- City accent -->
+                                <path d="M20 18 L20 10 M30 18 L30 6 M40 18 L40 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                                <circle cx="30" cy="6" r="2" fill="currentColor" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <h3>NYCDeli</h3>
+                            <p>New York's Corner Store, Digitized</p>
+                        </div>
+                        <span class="product-live-badge" data-repo="NYCDeli"></span>
+                    </a>
+                    <!-- PetPodcast -->
+                    <a href="products/petpodcast/index.html" class="product-card product-petpodcast">
+                        <div class="product-icon product-icon-svg" style="color:#F39C12">
+                            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Microphone -->
+                                <rect x="22" y="8" width="16" height="24" rx="8" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                <!-- Mic stand -->
+                                <path d="M14 28 Q14 44 30 44 Q46 44 46 28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="30" y1="44" x2="30" y2="52" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="22" y1="52" x2="38" y2="52" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <!-- Paw print accent -->
+                                <circle cx="30" cy="22" r="3" fill="currentColor" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <h3>PetPodcast</h3>
+                            <p>Stories From Your Furry Friends</p>
+                        </div>
+                        <span class="product-live-badge" data-repo="PetPodcast"></span>
+                    </a>
+                    <!-- Stoop-Politics -->
+                    <a href="products/stooppolitics/index.html" class="product-card product-stooppolitics">
+                        <div class="product-icon">
+                            <img src="Public/stoop politics.png" alt="Stoop Politics" style="border-radius:50%; object-fit:cover">
+                        </div>
+                        <div class="product-info">
+                            <h3>Stoop Politics</h3>
+                            <p>Where Neighborhoods Meet Democracy</p>
+                        </div>
+                        <span class="product-live-badge" data-repo="Stoop-Politics"></span>
                     </a>
                 </div>
 
@@ -293,7 +455,7 @@
 
         <!-- Footer -->
         <footer class="main-footer">
-            <p>&copy; 2025 Crateso. All rights reserved.</p>
+            <p>&copy; 2026 Crateso. All rights reserved. &nbsp;·&nbsp; <a href="mailto:hello@crateso.com" style="color:var(--gold-primary);text-decoration:none;">hello@crateso.com</a></p>
         </footer>
     </main>
 
@@ -313,7 +475,153 @@
     </div>
 
     <script>
-        // Category Expansion Functions
+        // ─── Particle Canvas ─────────────────────────────────────────────────────
+        (function() {
+            const canvas = document.getElementById('particles-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            const PARTICLE_COUNT = 60;
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            function randomBetween(a, b) { return a + Math.random() * (b - a); }
+
+            function initParticles() {
+                particles = [];
+                for (let i = 0; i < PARTICLE_COUNT; i++) {
+                    particles.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        r: randomBetween(0.5, 2.2),
+                        alpha: randomBetween(0.15, 0.55),
+                        vx: randomBetween(-0.18, 0.18),
+                        vy: randomBetween(-0.12, 0.12),
+                        color: Math.random() > 0.6 ? '#EDB645' : '#ffffff'
+                    });
+                }
+            }
+
+            function drawConnections() {
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 130) {
+                            ctx.beginPath();
+                            ctx.strokeStyle = `rgba(237, 182, 69, ${0.04 * (1 - dist / 130)})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawConnections();
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.x < 0) p.x = canvas.width;
+                    if (p.x > canvas.width) p.x = 0;
+                    if (p.y < 0) p.y = canvas.height;
+                    if (p.y > canvas.height) p.y = 0;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color.replace(')', `, ${p.alpha})`).replace('rgb', 'rgba').replace('#EDB645', `rgba(237,182,69,${p.alpha})`).replace('#ffffff', `rgba(255,255,255,${p.alpha})`);
+                    // simplified:
+                    ctx.globalAlpha = p.alpha;
+                    ctx.fillStyle = p.color;
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                });
+                requestAnimationFrame(animate);
+            }
+
+            window.addEventListener('resize', () => { resize(); initParticles(); });
+            resize();
+            initParticles();
+            animate();
+        })();
+
+        // ─── GitHub Live Repo Badges ──────────────────────────────────────────────
+        (async function() {
+            const repoMap = {
+                'Everloop.live': 'Everloop.live',
+                'HottiesThatHit': 'HottiesThatHit',
+                'PetPodcast': 'PetPodcast',
+                'Vespara': 'Vespara',
+                'TraumaBox': 'TraumaBox',
+                'Stoop-Politics': 'Stoop-Politics',
+                'NYCDeli': 'NYCDeli',
+                'EmployeeGM-GreenDog': 'EmployeeGM-GreenDog'
+            };
+            const OWNER = 'MarcMercury';
+            const badges = document.querySelectorAll('.product-live-badge[data-repo]');
+            const repoNames = [...new Set([...badges].map(b => b.dataset.repo))];
+
+            const results = await Promise.allSettled(
+                repoNames.map(repo =>
+                    fetch(`https://api.github.com/repos/${OWNER}/${repoMap[repo] || repo}`)
+                        .then(r => r.json())
+                        .then(d => ({ repo, data: d }))
+                )
+            );
+
+            const dataByRepo = {};
+            results.forEach(r => {
+                if (r.status === 'fulfilled' && r.value.data && !r.value.data.message) {
+                    dataByRepo[r.value.repo] = r.value.data;
+                }
+            });
+
+            badges.forEach(badge => {
+                const repo = badge.dataset.repo;
+                const data = dataByRepo[repo];
+                if (data) {
+                    const pushed = new Date(data.pushed_at);
+                    const daysAgo = Math.floor((Date.now() - pushed) / 86400000);
+                    const label = daysAgo === 0 ? 'Updated today' : daysAgo === 1 ? 'Updated yesterday' : `Updated ${daysAgo}d ago`;
+                    badge.textContent = label;
+                    badge.classList.add('badge-live');
+                    if (data.language) {
+                        const lang = badge.closest('.product-card').querySelector('.product-info p');
+                        if (lang) {
+                            const langEl = document.createElement('span');
+                            langEl.className = 'product-lang';
+                            langEl.textContent = data.language;
+                            badge.parentNode.appendChild(langEl);
+                        }
+                    }
+                }
+            });
+
+            // Update stat numbers
+            const liveCount = Object.keys(dataByRepo).length;
+            const repoEl = document.getElementById('stat-repos');
+            if (repoEl) animateCount(repoEl, liveCount);
+            animateCount(document.getElementById('stat-products'), 12);
+        })();
+
+        function animateCount(el, target) {
+            if (!el) return;
+            let start = 0;
+            const step = () => {
+                start += Math.ceil((target - start) / 6);
+                el.textContent = start;
+                if (start < target) requestAnimationFrame(step);
+                else el.textContent = target;
+            };
+            requestAnimationFrame(step);
+        }
+
+        // ─── Category Expansion Functions ────────────────────────────────────────
         function expandCategory(tile) {
             const category = tile.dataset.category;
             const overlay = document.getElementById('categoryOverlay');
@@ -331,7 +639,8 @@
             const titles = {
                 'stories': 'Stories & Games',
                 'productivity': 'Productivity & Communication',
-                'media': 'Media & Creative'
+                'media': 'Media & Creative',
+                'community': 'Community & Lifestyle'
             };
             title.textContent = titles[category];
             

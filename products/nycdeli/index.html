@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYCDeli - New York's Corner Store, Digitized | Crateso</title>
+    <meta name="description" content="The classic New York deli experience, brought into the digital age. Order, discover, and support your neighborhood spots.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <span>←</span>
+            <span>Back to Crateso</span>
+        </a>
+        <div class="nav-links">
+            <a href="#menu">The Menu</a>
+            <a href="#features">Features</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="#order" class="nav-cta">Order Now</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🗽 NEW YORK · DELI · DIGITAL</div>
+            <h1 class="hero-title">NYCDeli</h1>
+            <p class="hero-tagline">The corner store. Now in your corner.</p>
+            <p class="hero-description">
+                From the egg and cheese on a roll to the half-sour pickle and a lotto ticket — 
+                the New York deli experience, brought online without losing what makes it special.
+            </p>
+            <div class="hero-buttons">
+                <a href="#order" class="btn btn-primary">Find Your Deli</a>
+                <a href="#features" class="btn btn-secondary">See How It Works</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="deli-sign">
+                <span class="sign-text">OPEN 24 HRS</span>
+                <span class="sign-sub">Est. 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="ticker-strip">
+        <div class="ticker-content">
+            <span>🥯 Bagels &amp; Lox</span>
+            <span>🥚 Egg &amp; Cheese</span>
+            <span>🫙 Half-Sour Pickles</span>
+            <span>☕ Regular Coffee</span>
+            <span>🥪 Hero Sandwiches</span>
+            <span>🧃 Snapple on Ice</span>
+            <span>🎰 Scratch Tickets</span>
+            <span>📰 Daily News</span>
+            <span>🍦 Soft Serve</span>
+            <span>🥯 Bagels &amp; Lox</span>
+            <span>🥚 Egg &amp; Cheese</span>
+            <span>🫙 Half-Sour Pickles</span>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why NYCDeli</h2>
+            <p class="section-subtitle">Built for the neighborhoods that built New York</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Discover Local Delis</h3>
+                    <p>Find authentic neighborhood spots near you — not chains, not franchise nonsense. Real delis, real owners, real food.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Order Ahead</h3>
+                    <p>Skip the line without losing the vibe. Pre-order your morning sandwich, get notified when it's ready. The bodega cat stays unbothered.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Support Small Business</h3>
+                    <p>Direct transactions to the deli. No heavy commission cuts. We take the minimum so your favorite spot keeps its lights on.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Community Reviews</h3>
+                    <p>Real reviews from real New Yorkers. Know the difference between the spot with the good coffee and the one with the good vibes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎟️</div>
+                    <h3>Loyalty &amp; Deals</h3>
+                    <p>Regulars get rewarded. Punch cards, neighborhood deals, and specials that only show up for the people who actually show up.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌙</div>
+                    <h3>24/7 Available</h3>
+                    <p>The deli never really closes. Late-night delivery hookups, early morning pre-orders, and real-time inventory for what's in stock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Launching in NYC Soon</h2>
+                <p>We're partnering with delis borough by borough. Get on the list and we'll tell you when your neighborhood is live.</p>
+                <form class="waitlist-form" onsubmit="handleWaitlist(event)">
+                    <input type="email" placeholder="your@email.com" class="waitlist-input" required>
+                    <button type="submit" class="btn btn-primary">Join Waitlist</button>
+                </form>
+                <p class="cta-disclaimer">No spam. Just a tap on the shoulder when we're in your borough.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="support.html">Support</a>
+                <a href="data-deletion.html">Data Deletion</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Crateso · NYCDeli. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleWaitlist(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.textContent = '✓ We\'ll be in touch!';
+            btn.style.background = '#E74C3C';
+            btn.disabled = true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPodcast - Stories From Your Furry Friends | Crateso</title>
+    <meta name="description" content="Pet Podcast: Heartwarming, hilarious, and honest stories about life with animals. For pet lovers, by pet lovers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <span>←</span>
+            <span>Back to Crateso</span>
+        </a>
+        <div class="nav-links">
+            <a href="#episodes">Episodes</a>
+            <a href="#features">Features</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="#listen" class="nav-cta">Listen Now</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🎙️ PODCAST · PETS · COMMUNITY</div>
+            <div class="hero-icon">🐾</div>
+            <h1 class="hero-title">PetPodcast</h1>
+            <p class="hero-tagline">Their stories. Your heart.</p>
+            <p class="hero-description">
+                Every pet has a story worth telling. PetPodcast brings together pet owners, veterinarians, 
+                trainers, and animal advocates to celebrate, laugh, cry, and learn — together.
+            </p>
+            <div class="hero-buttons">
+                <a href="#listen" class="btn btn-primary">Listen to Episodes</a>
+                <a href="#features" class="btn btn-secondary">Submit Your Story</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="waveform-bar">
+        <div class="wave-container">
+            <div class="wave-bars">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p class="wave-label">New episodes every week</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">More Than a Podcast</h2>
+            <p class="section-subtitle">A platform for the pet-obsessed</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎧</div>
+                    <h3>Original Episodes</h3>
+                    <p>Deep dives, funny moments, and touching stories from pet owners across the country. New content every week.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐕</div>
+                    <h3>Submit Your Story</h3>
+                    <p>Think your pet's story deserves airtime? So do we. Submit your clip or write-up and we might feature it on the show.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🩺</div>
+                    <h3>Expert Guests</h3>
+                    <p>Vets, trainers, behaviorists, and rescue advocates share insights that go beyond what you'd find in a Google search.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Community Forum</h3>
+                    <p>Connect with other pet owners, trade tips, ask questions, and find your people in a safe, moderated community.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Listen Anywhere</h3>
+                    <p>Available on Apple Podcasts, Spotify, and our own native app. Your commute just got way more wholesome.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Rescue &amp; Adoption</h3>
+                    <p>Partnered with shelters to spotlight adoptable animals and share success stories that start with a second chance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="episodes" class="episodes-preview">
+        <div class="container">
+            <h2 class="section-title">Featured Episodes</h2>
+            <div class="episode-list">
+                <div class="episode-card">
+                    <div class="episode-number">EP. 01</div>
+                    <div class="episode-info">
+                        <h3>The Dog Who Saved the Block</h3>
+                        <p>A stray terrier mix, a Brooklyn street, and a neighborhood that changed because of one small dog's stubborn presence.</p>
+                    </div>
+                    <div class="episode-duration">42 min</div>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">EP. 02</div>
+                    <div class="episode-info">
+                        <h3>Senior Cats &amp; Second Acts</h3>
+                        <p>Why adopting older cats might be the best decision you'll ever make. Three stories, three cats, three life changes.</p>
+                    </div>
+                    <div class="episode-duration">35 min</div>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">EP. 03</div>
+                    <div class="episode-info">
+                        <h3>What Your Vet Wishes You Knew</h3>
+                        <p>A frank conversation with a small animal vet about the questions owners ask too late and the ones they should ask sooner.</p>
+                    </div>
+                    <div class="episode-duration">58 min</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="listen" class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Subscribe &amp; Never Miss an Episode</h2>
+                <p>New episodes drop every week. Get notified, and join a community that thinks their pet is the most interesting creature on earth — because they're right.</p>
+                <form class="waitlist-form" onsubmit="handleSubscribe(event)">
+                    <input type="email" placeholder="your@email.com" class="waitlist-input" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p class="cta-disclaimer">Plus occasional pet content that will make your day marginally better.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="support.html">Support</a>
+                <a href="data-deletion.html">Data Deletion</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Crateso · PetPodcast. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubscribe(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.textContent = '✓ Subscribed!';
+            btn.style.background = '#F39C12';
+            btn.disabled = true;
+        }
+    </script>
+</body>
+</html>
