@@ -3,9 +3,11 @@ The Main Marketing Page for all Crateso Products
 
 ## Hosting & security
 
-- Production (`www.crateso.com`) is served by **GitHub Pages** from `main`. GitHub Pages
-  cannot send custom HTTP headers, so each page carries its Content-Security-Policy and
-  Referrer-Policy as `<meta>` tags. `vercel.json` defines the full header set for Vercel deployments.
+- Production (`www.crateso.com`) is served by **Vercel** (project `crateso-main-page`, auto-deploys
+  from `main`); `crateso.com` 308-redirects to `www`. DNS is at GoDaddy (apex `A 76.76.21.21`,
+  `www CNAME cname.vercel-dns.com`). Security headers come from `vercel.json`; every page also
+  carries CSP/referrer `<meta>` tags as defense in depth. `trailingSlash: true` is required so
+  relative asset paths resolve.
 - All JavaScript lives in external files (`js/`, plus per-page `main.js`); inline scripts
   and `on*=""` handlers are blocked by the CSP.
 - Waitlist forms post to the Vercel serverless function `api/waitlist.js`, which validates input
