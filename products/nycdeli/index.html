@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYCDeli - New York's Corner Store, Digitized | Crateso</title>
     <meta name="description" content="The classic New York deli experience, brought into the digital age. Order, discover, and support your neighborhood spots.">
@@ -107,7 +109,7 @@
             <div class="cta-card">
                 <h2>Launching in NYC Soon</h2>
                 <p>We're partnering with delis borough by borough. Get on the list and we'll tell you when your neighborhood is live.</p>
-                <form class="waitlist-form" onsubmit="handleWaitlist(event)">
+                <form class="waitlist-form" data-waitlist data-success-text="✓ We&#39;ll be in touch!" data-success-color="#E74C3C">
                     <input type="email" placeholder="your@email.com" class="waitlist-input" required>
                     <button type="submit" class="btn btn-primary">Join Waitlist</button>
                 </form>
@@ -128,14 +130,6 @@
         </div>
     </footer>
 
-    <script>
-        function handleWaitlist(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            btn.textContent = '✓ We\'ll be in touch!';
-            btn.style.background = '#E74C3C';
-            btn.disabled = true;
-        }
-    </script>
+    <script src="../../js/waitlist.js" defer></script>
 </body>
 </html>

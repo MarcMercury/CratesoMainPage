@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetPodcast - Stories From Your Furry Friends | Crateso</title>
     <meta name="description" content="Pet Podcast: Heartwarming, hilarious, and honest stories about life with animals. For pet lovers, by pet lovers.">
@@ -129,7 +131,7 @@
             <div class="cta-card">
                 <h2>Subscribe &amp; Never Miss an Episode</h2>
                 <p>New episodes drop every week. Get notified, and join a community that thinks their pet is the most interesting creature on earth — because they're right.</p>
-                <form class="waitlist-form" onsubmit="handleSubscribe(event)">
+                <form class="waitlist-form" data-waitlist data-success-text="✓ Subscribed!" data-success-color="#F39C12">
                     <input type="email" placeholder="your@email.com" class="waitlist-input" required>
                     <button type="submit" class="btn btn-primary">Subscribe</button>
                 </form>
@@ -150,14 +152,6 @@
         </div>
     </footer>
 
-    <script>
-        function handleSubscribe(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            btn.textContent = '✓ Subscribed!';
-            btn.style.background = '#F39C12';
-            btn.disabled = true;
-        }
-    </script>
+    <script src="../../js/waitlist.js" defer></script>
 </body>
 </html>

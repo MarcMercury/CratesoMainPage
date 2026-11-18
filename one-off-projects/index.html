@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One-Off Projects | Crateso</title>
     <meta name="description" content="A catalog of unique, single-build projects completed by Crateso. Custom development capabilities and credibility reference.">
@@ -90,46 +92,13 @@
             <p>You must be 21 years or older to access Vespara — The Social Operating System.</p>
             <p class="age-modal-question">Are you 21 or older?</p>
             <div class="age-modal-buttons">
-                <button class="age-btn age-btn-yes" onclick="verifyAge(true)">Yes, I'm 21+</button>
-                <button class="age-btn age-btn-no" onclick="verifyAge(false)">No, I'm under 21</button>
+                <button class="age-btn age-btn-yes" type="button" data-verify-age="true">Yes, I'm 21+</button>
+                <button class="age-btn age-btn-no" type="button" data-verify-age="false">No, I'm under 21</button>
             </div>
             <p class="age-modal-disclaimer">By clicking "Yes", you confirm that you are of legal age to view adult content in your jurisdiction.</p>
         </div>
     </div>
 
-    <script>
-        function showAgeVerification() {
-            document.getElementById('ageModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function verifyAge(isOfAge) {
-            if (isOfAge) {
-                document.getElementById('ageModal').classList.remove('active');
-                document.body.style.overflow = '';
-                window.location.href = '../products/vespara/index.html';
-            } else {
-                document.getElementById('ageModal').classList.remove('active');
-                document.body.style.overflow = '';
-                alert('You must be 21 or older to access this content.');
-            }
-        }
-
-        // Close modal if clicking outside
-        document.getElementById('ageModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                document.getElementById('ageModal').classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-    </script>
+    <script src="main.js" defer></script>
 </body>
 </html>

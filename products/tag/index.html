@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAG - Trusted Adult Games | Crateso</title>
     <meta name="description" content="TAG creates smart, sexy, social games for people who like to flirt, laugh, and maybe lose a few layers along the way. Consensual fun for consenting adults.">
@@ -268,7 +270,7 @@
                 <h3>Unlock Full Game Details</h3>
                 <p>To view complete rules and details for our games, please verify your information below.</p>
                 
-                <form id="access-form" class="access-form">
+                <form id="access-form" class="access-form" data-storage-key="tag-access-verified" data-content="games-content">
                     <div class="form-group">
                         <label for="access-name">Full Name</label>
                         <input type="text" id="access-name" placeholder="Your full name" required>
@@ -661,58 +663,7 @@
         </div>
     </section>
 
-    <!-- Access Gate Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const accessGate = document.getElementById('access-gate');
-            const gamesContent = document.getElementById('games-content');
-            const accessForm = document.getElementById('access-form');
-            
-            // Check if user already has access
-            const hasAccess = localStorage.getItem('tag-access-verified');
-            if (hasAccess) {
-                accessGate.classList.add('hidden');
-                gamesContent.classList.remove('hidden');
-            }
-            
-            // Handle form submission
-            accessForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('access-name').value;
-                const email = document.getElementById('access-email').value;
-                const phone = document.getElementById('access-phone').value;
-                const ageVerified = document.getElementById('age-verify').checked;
-                
-                if (name && email && phone && ageVerified) {
-                    // Store access data (could also send to Supabase here)
-                    localStorage.setItem('tag-access-verified', 'true');
-                    localStorage.setItem('tag-access-data', JSON.stringify({
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        timestamp: new Date().toISOString()
-                    }));
-                    
-                    // Animate the transition
-                    accessGate.style.opacity = '0';
-                    accessGate.style.transform = 'translateY(-20px)';
-                    
-                    setTimeout(() => {
-                        accessGate.classList.add('hidden');
-                        gamesContent.classList.remove('hidden');
-                        gamesContent.style.opacity = '0';
-                        gamesContent.style.transform = 'translateY(20px)';
-                        
-                        setTimeout(() => {
-                            gamesContent.style.opacity = '1';
-                            gamesContent.style.transform = 'translateY(0)';
-                        }, 50);
-                    }, 300);
-                }
-            });
-        });
-    </script>
+    <script src="../../js/access-gate.js" defer></script>
 
     <!-- Footer -->
     <footer class="footer">
