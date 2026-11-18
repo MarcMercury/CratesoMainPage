@@ -1,6 +1,5 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "trailingSlash": true,
   "headers": [
     {
       "source": "/(.*)",
@@ -38,24 +37,6 @@
           "value": "same-origin"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/products/hottiesthathit",
-      "destination": "/products/hottiesthathit/index.html"
-    },
-    {
-      "source": "/products/nycdeli",
-      "destination": "/products/nycdeli/index.html"
-    },
-    {
-      "source": "/products/petpodcast",
-      "destination": "/products/petpodcast/index.html"
-    },
-    {
-      "source": "/products/stooppolitics",
-      "destination": "/products/stooppolitics/index.html"
     }
   ]
 }
