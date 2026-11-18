@@ -1,5 +1,5 @@
 // POST /api/waitlist — stores a waitlist signup in Supabase.
-// Required env vars (server-side only): SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
+// Required env vars (server-side only): SUPABASE_URL, SUPABASE_SECRET_KEY (sb_secret_…)
 
 const PRODUCTS = new Set(['nycdeli', 'hottiesthathit', 'petpodcast', 'clo']);
 const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,253}\.[^\s@]{2,}$/;
@@ -42,8 +42,8 @@ module.exports = async function handler(req, res) {
         return res.status(400).json({ error: 'Invalid email or product' });
     }
 
-    const { SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY } = process.env;
-    if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
+    const { SUPABASE_URL, SUPABASE_SECRET_KEY } = process.env;
+    if (!SUPABASE_URL || !SUPABASE_SECRET_KEY) {
         console.error('waitlist: Supabase env vars are not configured');
         return res.status(503).json({ error: 'Signups are temporarily unavailable' });
     }
@@ -52,8 +52,7 @@ module.exports = async function handler(req, res) {
         const r = await fetch(`${SUPABASE_URL}/rest/v1/waitlist_signups?on_conflict=email,product`, {
             method: 'POST',
             headers: {
-                apikey: SUPABASE_SERVICE_ROLE_KEY,
-                Authorization: `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+                apikey: SUPABASE_SECRET_KEY,
                 'Content-Type': 'application/json',
                 Prefer: 'resolution=ignore-duplicates,return=minimal'
             },

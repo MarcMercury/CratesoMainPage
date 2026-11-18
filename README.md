@@ -10,9 +10,10 @@ The Main Marketing Page for all Crateso Products
   and `on*=""` handlers are blocked by the CSP.
 - Waitlist forms post to the Vercel serverless function `api/waitlist.js`, which validates input
   and writes to the Supabase table defined in `supabase/migrations/`. It requires the Vercel env
-  vars `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` (server-side only, never in client JS).
-- The waitlist uses a **dedicated Crateso marketing Supabase project**. This site must have no
-  connection to any product database (e.g. EmployeeGM).
+  vars `SUPABASE_URL` and `SUPABASE_SECRET_KEY` (production only, server-side, never in client JS).
+- The waitlist uses the Crateso Supabase project `wihvzkfolnvxceqccbpc` ("CratesoMainPage"). This site must
+  have no connection to any product database (e.g. EmployeeGM). Admin access is via the
+  `SUPABASE_ACCESS_TOKEN` Codespaces secret (Supabase Management API).
 - `supabase/security-audit.sql` contains read-only queries for auditing RLS and grants.
 - CI (`.github/workflows/security.yml`) runs `node scripts/check-html-security.mjs` and gitleaks.
 - See [SECURITY.md](SECURITY.md) for contributor rules and vulnerability reporting.
