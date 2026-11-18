@@ -1,4 +1,4 @@
--- Run in the Supabase SQL editor (project wihvzkfolnvxceqccbpc). Read-only.
+-- Read-only RLS/privilege audit. Run in the Supabase SQL editor of any project.
 
 -- 1. Public tables without Row Level Security (must be empty).
 select schemaname, tablename

@@ -11,9 +11,8 @@ The Main Marketing Page for all Crateso Products
 - Waitlist forms post to the Vercel serverless function `api/waitlist.js`, which validates input
   and writes to the Supabase table defined in `supabase/migrations/`. It requires the Vercel env
   vars `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` (server-side only, never in client JS).
-- Supabase project `wihvzkfolnvxceqccbpc` is the **EmployeeGM HR database**. Admin credentials are stored
-  as encrypted, development-only env vars on the Vercel project `crateso-main-page` (never in git);
-  load them into a shell with `source scripts/load-supabase-env.sh` (requires `VERCEL_TOKEN`).
+- The waitlist uses a **dedicated Crateso marketing Supabase project**. This site must have no
+  connection to any product database (e.g. EmployeeGM).
 - `supabase/security-audit.sql` contains read-only queries for auditing RLS and grants.
 - CI (`.github/workflows/security.yml`) runs `node scripts/check-html-security.mjs` and gitleaks.
 - See [SECURITY.md](SECURITY.md) for contributor rules and vulnerability reporting.
