@@ -1,0 +1,3 @@
+# Supabase anon (public, RLS-enforced) key removed from the tree; rotate it in Supabase.
+db8ed15248941fe221fefa463134084dda186403:js/supabase-config.js:jwt:19
+765c2ebb441d17f0e2dca9939066d3aaa1f01cba:js/supabase-config.js:jwt:3

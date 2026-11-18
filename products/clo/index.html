@@ -219,7 +219,8 @@
             <p class="cta-tagline">Become the Chief Life Officer.</p>
             <p class="cta-subtitle">Coming soon to iOS and Android.</p>
             
-            <form class="waitlist-form" id="waitlistForm">
+            <form class="waitlist-form" id="waitlistForm" data-waitlist data-product="clo" data-success-text="✓ You&#39;re on the list!" data-success-color="#2ECC71">
+                <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
                 <input type="email" placeholder="Enter your email" required>
                 <button type="submit" class="btn btn-primary">Join Waitlist</button>
             </form>
@@ -240,6 +241,6 @@
         </div>
     </footer>
 
-    <script src="main.js" defer></script>
+    <script src="../../js/waitlist.js" defer></script>
 </body>
 </html>
